@@ -1,0 +1,41 @@
+{
+  "name": "my-vue3-project",
+  "description": "Companion code for the book \"Large Scale Apps with Vue 2 and TypeScript\" by Damiano Fusco",
+  "version": "1.0.0",
+  "author": "Damiano Fusco",
+  "license": "MIT",
+  "scripts": {
+    "serve": "cross-env VUE_APP_API_CLIENT=mock vue-cli-service serve --mode development",
+    "build": "cross-env VUE_APP_API_CLIENT=live vue-cli-service build --mode production",
+    "build-mock": "cross-env VUE_APP_API_CLIENT=mock vue-cli-service build --mode production",
+    "test:unit": "vue-cli-service test:unit",
+    "test": "npm run test:unit",
+    "pretty": "prettier --write '**/*.{ts,vue}'"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cross-env": "^7.0.2",
+    "vue": "^3.0.0-0",
+    "vue-i18n": "^9.0.0-alpha.11",
+    "vue-router": "^4.0.0-0",
+    "vuex": "^4.0.0-0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.11",
+    "@types/mocha": "^5.2.4",
+    "@types/sinon": "^9.0.4",
+    "@types/vue-i18n": "^7.0.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-typescript": "~4.5.0",
+    "@vue/cli-plugin-unit-mocha": "~4.5.0",
+    "@vue/cli-plugin-vuex": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0-0",
+    "@vue/test-utils": "^2.0.0-0",
+    "chai": "^4.1.2",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.2",
+    "sinon": "^9.0.3",
+    "typescript": "~3.9.3"
+  }
+}
