@@ -6,9 +6,7 @@ import {
   LocalesStateInterface
 } from '@/models/store'
 
-import {
-  initialLocalesState
-} from './initialState'
+import { initialLocalesState } from './initialState'
 
 import { LocaleInfoInterface } from '@/models/localization/LocaleInfo.interface'
 import { i18n } from '@/plugins/vue-i18n-next-plugin'

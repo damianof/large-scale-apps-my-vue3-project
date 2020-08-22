@@ -1,0 +1,9 @@
+{
+  "global": {
+  },
+  "items": {
+    "apiUrls": {
+      "fetchItems": "/path/to/your/real/LIVE/api/and-point"
+    }
+  }
+}

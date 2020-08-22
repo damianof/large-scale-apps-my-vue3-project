@@ -1,7 +1,8 @@
-# my-vue3-project
+#####Companion code for the book:
+<img src="readme-images/book-vue3-300px.png" width="100px" /> 
 
-Companion code for the book [Large Scale Apps with Vue 3 and TypeScript](
-https://leanpub.com/large-scale-apps-with-vue3-and-typescript "Large Scale Apps with Vue 3 and TypeScript") by Damiano Fusco
+[Large Scale Apps with Vue 3 and TypeScript](
+https://leanpub.com/large-scale-apps-with-vue3-and-typescript "Large Scale Apps with Vue 3 and TypeScript")
 
 ## Note
 This folder contains the sample project using the Vue 3 composition API coding style.
@@ -28,3 +29,7 @@ npm run test:unit
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### Screenshot as of Chapter 14
+
+<img src="readme-images/screenshot-as-of-chapter-14.png" width="80%" />

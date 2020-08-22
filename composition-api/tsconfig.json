@@ -9,6 +9,7 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true, /* this allows to import .json file as if they were .ts files: using to load config files */
     "sourceMap": true,
     "baseUrl": ".",
     "types": [

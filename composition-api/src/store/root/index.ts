@@ -26,4 +26,6 @@ const storeOptions: StoreOptions<RootStateInterface> = {
 }
 
 // Vuex Root store instance
-export const store: RootStoreModel<RootStateInterface> = <any>createStore(storeOptions)
+export const store: RootStoreModel<RootStateInterface> = <any>(
+  createStore(storeOptions)
+)

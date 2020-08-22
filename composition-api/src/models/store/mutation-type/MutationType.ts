@@ -1,6 +1,6 @@
 // group our constants in a namespace
 import { ItemsMutationType } from '../items/ItemsMutationType'
-import { LocalesMutationType} from '../locales/LocalesMutationType'
+import { LocalesMutationType } from '../locales/LocalesMutationType'
 
 export namespace MutationType {
   export const items = ItemsMutationType

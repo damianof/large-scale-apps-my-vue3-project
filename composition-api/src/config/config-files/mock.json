@@ -1,0 +1,9 @@
+{
+  "global": {
+  },
+  "items": {
+    "apiUrls": {
+      "fetchItems": "/static/data/items.json"
+    }
+  }
+}

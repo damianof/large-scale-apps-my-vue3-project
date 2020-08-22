@@ -11,7 +11,7 @@ import {
  */
 export interface RootStoreInterface {
   // GEN-INTERFACE-PROPS
-  itemsState: ItemsStateInterface,
+  itemsState: ItemsStateInterface
   localesState: LocalesStateInterface
   // additional domain-specific module interfaces we’ll be added here in the next book chapters
 }

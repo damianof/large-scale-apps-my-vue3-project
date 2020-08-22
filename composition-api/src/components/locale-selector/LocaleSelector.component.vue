@@ -44,9 +44,7 @@
 
 <style lang="scss">
   .locale-selector {
-    display: inline-grid;
-    grid-template-rows: 20px 40px 20px;
-    align-items: center;
+    display: inline-flex;
 
     .locale-radio-group {
       display: inline-flex;

@@ -6,9 +6,7 @@ import {
   ItemsStateInterface
 } from '@/models/store'
 
-import {
-  initialItemsState
-} from './initialState'
+import { initialItemsState } from './initialState'
 
 import { ItemInterface } from '@/models/items/Item.interface'
 import apiClient from '@/api-client'
@@ -21,10 +19,13 @@ export const mutations: MutationTree<ItemsStateInterface> = {
     state.items = items
     state.loading = false
   },
-  selectItem(state: ItemsStateInterface, params: {
+  selectItem(
+    state: ItemsStateInterface,
+    params: {
       id: number
       selected: boolean
-    }) {
+    }
+  ) {
     const { id, selected } = params
     const item = state.items.find(o => o.id === id)
     if (item) {

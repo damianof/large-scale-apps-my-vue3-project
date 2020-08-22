@@ -6,5 +6,4 @@ import { RootStoreInterface } from './RootStore.interface'
  * @description
  * Extends Vuex Store declaration with our RootStoreInterface
  */
-export class RootStoreModel<S> extends Vuex.Store<RootStoreInterface> {
-}
+export class RootStoreModel<S> extends Vuex.Store<RootStoreInterface> {}

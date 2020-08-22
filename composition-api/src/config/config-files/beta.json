@@ -1,0 +1,9 @@
+{
+  "global": {
+  },
+  "items": {
+    "apiUrls": {
+      "fetchItems": "/path/to/your/real/BETA/api/and-point"
+    }
+  }
+}

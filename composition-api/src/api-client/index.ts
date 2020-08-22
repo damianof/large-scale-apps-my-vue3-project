@@ -6,6 +6,7 @@ let env: string = 'mock'
 if (process.env && process.env.VUE_APP_API_CLIENT) {
   env = process.env.VUE_APP_API_CLIENT.trim()
 }
+
 // return either the live or the mock client
 let apiClient: ApiClientInterface
 if (env === 'live') {

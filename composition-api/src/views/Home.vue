@@ -29,14 +29,19 @@
       })
 
       onMounted(() => {
-        store.dispatch(`${StoreModuleNames.itemsState}/${MutationType.items.loadItems}`)
+        store.dispatch(
+          `${StoreModuleNames.itemsState}/${MutationType.items.loadItems}`
+        )
       })
 
       const onSelectItem = (item: ItemInterface) => {
-        store.dispatch(`${StoreModuleNames.itemsState}/${MutationType.items.selectItem}`, {
-          id: item.id,
-          selected: !item.selected
-        })
+        store.dispatch(
+          `${StoreModuleNames.itemsState}/${MutationType.items.selectItem}`,
+          {
+            id: item.id,
+            selected: !item.selected
+          }
+        )
       }
 
       return {

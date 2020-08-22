@@ -12,21 +12,21 @@ const mockParams: HttpRequestParamsInterface = {
 describe('HttpClient.get', () => {
   before(() => {
     const mockedRequestConfig = {
-        headers: {
-        }
+      headers: {}
     } as AxiosRequestConfig
 
     const mockedPromise = MockedPromiseFactory({
-        url: mockParams.url,
-        statusCode: 400,
-        statusText: 'Error',
-        requestConfig: mockedRequestConfig,
-        data: 'get completed with errors',
-        reject: true
+      url: mockParams.url,
+      statusCode: 400,
+      statusText: 'Error',
+      requestConfig: mockedRequestConfig,
+      data: 'get completed with errors',
+      reject: true
     })
 
     // since HttpClient uses axios internally, stub axios here
-    sinon.stub(axios, 'get')
+    sinon
+      .stub(axios, 'get')
       .withArgs(mockParams.url, mockedRequestConfig)
       .returns(mockedPromise)
   })
@@ -35,7 +35,7 @@ describe('HttpClient.get', () => {
     sinon.restore()
   })
 
-  it('should reject and return 400', (done) => {
+  it('should reject and return 400', done => {
     HttpClient.get<string>(mockParams)
       .then((response: any) => {
         // should not get in here
