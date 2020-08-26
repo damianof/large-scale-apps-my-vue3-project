@@ -5,9 +5,9 @@
   "author": "Damiano Fusco",
   "license": "MIT",
   "scripts": {
-    "serve": "cross-env VUE_APP_API_CLIENT=mock vue-cli-service serve --mode development",
-    "build": "cross-env VUE_APP_API_CLIENT=live vue-cli-service build --mode production",
-    "build-mock": "cross-env VUE_APP_API_CLIENT=mock vue-cli-service build --mode production",
+    "serve": "cross-env VUE_APP_CONFIG=mock vue-cli-service serve --mode development",
+    "build": "cross-env VUE_APP_CONFIG=live vue-cli-service build --mode production",
+    "build-mock": "cross-env VUE_APP_CONFIG=mock vue-cli-service build --mode production",
     "test-mock": "cross-env VUE_APP_CONFIG=mock vue-cli-service test:unit",
     "test-local": "cross-env VUE_APP_CONFIG=local vue-cli-service test:unit",
     "test-beta": "cross-env VUE_APP_CONFIG=beta vue-cli-service test:unit",

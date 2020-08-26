@@ -6,13 +6,31 @@ describe('config', () => {
     expect(config).to.have.own.property('global')
   })
 
+  it('instance should have "httpClient" section', () => {
+    expect(config).to.have.own.property('httpClient')
+  })
+
   it('instance should have "items" section', () => {
     expect(config).to.have.own.property('items')
   })
 
   describe('global', () => {
     const section = config.global
-    // tests against the global section
+    // tests against the global section eventually go here
+  })
+
+  describe('httpClient', () => {
+    const section = config.httpClient
+    it('section should have "tokenKey" property', () => {
+      expect(section).to.have.own.property('tokenKey')
+    })
+  })
+
+  describe('apiClient', () => {
+    const section = config.apiClient
+    it('section should have "type" property', () => {
+      expect(section).to.have.own.property('type')
+    })
   })
 
   describe('items', () => {

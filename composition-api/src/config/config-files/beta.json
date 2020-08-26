@@ -1,6 +1,12 @@
 {
   "global": {
   },
+  "httpClient": {
+    "tokenKey": "myapp-token"
+  },
+  "apiClient": {
+    "type": "live"
+  },
   "items": {
     "apiUrls": {
       "fetchItems": "/path/to/your/real/BETA/api/and-point"

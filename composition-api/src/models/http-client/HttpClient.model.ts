@@ -1,7 +1,7 @@
 import axios, { AxiosRequestConfig, AxiosError, AxiosResponse } from 'axios'
-
 import { HttpRequestParamsInterface } from './HttpRequestParams.interface'
 import { HttpClientInterface } from './HttpClient.interface'
+import { config } from '@/config'
 
 /**
  * @name HttpClientModel
@@ -11,10 +11,8 @@ import { HttpClientInterface } from './HttpClient.interface'
  */
 export class HttpClientModel implements HttpClientInterface {
   private getToken(): string {
-    const TOKEN_KEY =
-      process.env && process.env.VUE_APP_TOKEN_KEY
-        ? process.env.VUE_APP_TOKEN_KEY
-        : 'myapp-token'
+    // get token key from App config
+    const TOKEN_KEY = config.httpClient.tokenKey || 'myapp-token'
     const token = localStorage.getItem(TOKEN_KEY) || ''
     return token
   }
