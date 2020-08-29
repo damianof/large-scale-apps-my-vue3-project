@@ -4,9 +4,13 @@ import {
   ItemsApiClientModel
 } from '@/models/api-client/items'
 
-const urls: ItemsApiClientUrlsInterface = {
-  fetchItems: '/static/data/items.json'
-}
+import { config } from '@/config'
+
+// TODO: Book: update chapter
+// const urls: ItemsApiClientUrlsInterface = {
+//   fetchItems: '/static/data/items.json'
+// }
+const urls: ItemsApiClientUrlsInterface = config.items.apiUrls
 
 // instantiate the ItemsApiClient pointing at the url that returns static json mock data
 const itemsApiClient: ItemsApiClientInterface = new ItemsApiClientModel(urls)

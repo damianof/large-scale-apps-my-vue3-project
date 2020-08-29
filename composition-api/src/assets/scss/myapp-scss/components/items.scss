@@ -1,0 +1,37 @@
+ul {
+  list-style-type: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
+
+  li.item {
+    padding: 0;
+    outline: solid 1px #eee;
+    display: grid;
+    grid-template-columns: 1.7em auto;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    .name {
+      padding: 5px;
+      text-align: left;
+    }
+    .selected-indicator {
+      padding: 5px;
+      font-size: 3em;
+      line-height: 0.5em;
+      padding: 5px;
+      color: lightgray;
+    }
+    &.selected {
+      .selected-indicator {
+        color: skyblue;
+      }
+    }
+    &:hover {
+      background-color: #eee;
+    }
+  }
+}

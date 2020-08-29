@@ -1,0 +1,62 @@
+body {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 10px;
+  color: #2c3e50;
+  
+  h2 {
+    margin: 0;
+  }
+
+  .long-date {
+    font-size: 12px;
+  }
+
+  #nav {
+    padding: 8px 0;
+    a {
+      font-weight: bold;
+      color: #42b983;
+      &.router-link-exact-active {
+        color: #42b983;
+      }
+    }
+  }
+}
+
+body.dark-theme {
+  background-color: black;
+  color: lighten(#2c3e50, 50%);
+  margin: 0;
+
+  #nav {
+    a {
+      color: darken(#42b983, 25%);
+      &.router-link-exact-visited {
+        color: #42b983;
+      }
+      &.router-link-exact-active {
+        color: darken(#42b983, 15%);
+      }
+    }
+  }
+}
+
+body.navy-theme {
+  background-color: navy;
+  color: lighten(#2c3e50, 50%);
+  margin: 0;
+
+  #nav {
+    a {
+      color: darken(#42b983, 25%);
+      &.router-link-exact-visited {
+        color: #42b983;
+      }
+      &.router-link-exact-active {
+        color: darken(#42b983, 15%);
+      }
+    }
+  }
+}

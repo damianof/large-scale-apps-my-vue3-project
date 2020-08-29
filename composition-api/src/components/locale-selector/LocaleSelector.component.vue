@@ -41,28 +41,3 @@
 
   export default defineComponent(LocaleSelectorComponent)
 </script>
-
-<style lang="scss">
-  .locale-selector {
-    display: inline-flex;
-
-    .locale-radio-group {
-      display: inline-flex;
-      justify-content: center;
-
-      label.locale-radio {
-        cursor: pointer;
-        display: block;
-        padding: 5px;
-
-        &.selected {
-          border-bottom: solid 5px #42b983;
-        }
-      }
-
-      input {
-        display: none;
-      }
-    }
-  }
-</style>

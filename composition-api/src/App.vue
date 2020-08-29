@@ -2,6 +2,7 @@
   <div id="app">
     <div class="long-date">{{ i18n.d(new Date(), 'long') }}</div>
     <h2>{{ i18n.t('welcome') }}</h2>
+    <ThemeSelector />
     <LocaleSelector
       :availableLocales="availableLocales"
       @clicked="onLocaleClicked"
@@ -21,11 +22,13 @@
   import { store } from '@/store'
   import { LocaleInfoInterface } from '@/models/localization/LocaleInfo.interface'
   import LocaleSelector from '@/components/locale-selector/LocaleSelector.component.vue'
+  import ThemeSelector from '@/components/theme-selector/ThemeSelector.component.vue'
 
   export default defineComponent({
     name: 'App',
     components: {
-      LocaleSelector
+      LocaleSelector,
+      ThemeSelector
     },
     setup() {
       const i18n = useI18n()
@@ -49,31 +52,3 @@
     }
   })
 </script>
-
-<style lang="scss">
-  #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    padding: 10px;
-    color: #2c3e50;
-    h2 {
-      margin: 0;
-    }
-
-    .long-date {
-      font-size: 12px;
-    }
-  }
-
-  #nav {
-    padding: 8px 0;
-    a {
-      font-weight: bold;
-      color: #2c3e50;
-      &.router-link-exact-active {
-        color: #42b983;
-      }
-    }
-  }
-</style>

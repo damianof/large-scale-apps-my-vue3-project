@@ -1,4 +1,4 @@
-import { ItemsApiClientUrlsInterface } from '@/models/api-clients/items'
+import { ItemsApiClientUrlsInterface } from '@/models/api-client/items'
 
 /**
  * @Name ConfigInterface
