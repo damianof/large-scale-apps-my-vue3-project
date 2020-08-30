@@ -6,10 +6,7 @@ import {
 
 import { config } from '@/config'
 
-// TODO: Book: update chapter
-// const urls: ItemsApiClientUrlsInterface = {
-//   fetchItems: '/static/data/items.json'
-// }
+// urls for this API client
 const urls: ItemsApiClientUrlsInterface = config.items.apiUrls
 
 // instantiate the ItemsApiClient pointing at the url that returns static json mock data
