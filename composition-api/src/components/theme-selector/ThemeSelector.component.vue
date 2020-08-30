@@ -22,7 +22,7 @@
 </template>
 
 <script lang="ts">
-  import { defineComponent, reactive, computed, ref } from 'vue'
+  import { defineComponent, reactive, onMounted, ref } from 'vue'
 
   interface ThemeInfoInterface {
     selected: boolean
@@ -31,7 +31,7 @@
   }
 
   const themes: ThemeInfoInterface[] = reactive([{
-    selected: true,
+    selected: false,
     name: 'light',
     bodyCss: 'default'
   }, {
@@ -57,6 +57,13 @@
           theme.selected = theme.name === themeClicked.name
         })
       }
+
+      onMounted(() => {
+        const defaultTheme = themes.find(theme => theme.name === 'dark')
+        if (defaultTheme) {
+          onThemeClicked(defaultTheme)
+        }
+      })
 
       return {
         themes,
