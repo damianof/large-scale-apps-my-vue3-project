@@ -1,13 +1,13 @@
-#####Companion code for the book:
-<img src="readme-images/book-vue3-300px.png" width="100px" /> 
+### Companion code for the book:
+<img src="readme-images/book-vue3-300px.png" width="80px" /> 
 
 [Large Scale Apps with Vue 3 and TypeScript](
 https://leanpub.com/large-scale-apps-with-vue3-and-typescript "Large Scale Apps with Vue 3 and TypeScript")
 
-## Screenshot as of Chapter 15
+### Screenshot as of Chapter 15
 <img src="readme-images/screenshot-as-of-chapter-15.png" width="600px" />
 
-## Note
+### Note
 This folder contains the sample project using the Vue 3 composition API coding style.
 
 ## Project setup
