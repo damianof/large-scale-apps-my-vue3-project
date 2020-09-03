@@ -4,6 +4,9 @@
 [Large Scale Apps with Vue 3 and TypeScript](
 https://leanpub.com/large-scale-apps-with-vue3-and-typescript "Large Scale Apps with Vue 3 and TypeScript")
 
+## Screenshot as of Chapter 15
+<img src="readme-images/screenshot-as-of-chapter-15.png" width="600px" />
+
 ## Note
 This folder contains the sample project using the Vue 3 composition API coding style.
 
@@ -30,6 +33,4 @@ npm run test:unit
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-### Screenshot as of Chapter 14
 
-<img src="readme-images/screenshot-as-of-chapter-14.png" width="80%" />
