@@ -9,16 +9,16 @@
   import { defineComponent, computed, PropType } from 'vue'
   import { ItemInterface } from '@/models/items/Item.interface'
 
-  const ItemComponent = {
+  export default defineComponent({
     props: {
       model: {
         type: Object as PropType<ItemInterface>
       }
     },
-    setup(props: any, { emit }: any) {
+    setup(props, { emit }) {
       const css = computed(() => {
         let css = 'item'
-        if (props.model.selected) {
+        if (props.model?.selected) {
           css += ' selected'
         }
         return css.trim()
@@ -33,6 +33,5 @@
         onClick
       }
     }
-  }
-  export default defineComponent(ItemComponent)
+  })
 </script>

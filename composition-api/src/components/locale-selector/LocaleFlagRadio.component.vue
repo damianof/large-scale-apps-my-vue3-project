@@ -21,13 +21,13 @@
   import { LocaleInfoInterface } from '@/models/localization/LocaleInfo.interface'
   import { i18n } from '@/plugins/vue-i18n-next-plugin'
 
-  const LocaleFlagRadioComponent = {
+  export default defineComponent({
     props: {
       localeInfo: {
         type: Object
       }
     },
-    setup(props: any, { emit }: any) {
+    setup(props, { emit }) {
       const i18n = useI18n()
 
       const onClick = () => {
@@ -38,7 +38,5 @@
         onClick
       }
     }
-  }
-
-  export default defineComponent(LocaleFlagRadioComponent)
+  })
 </script>

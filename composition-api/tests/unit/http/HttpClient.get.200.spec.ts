@@ -36,7 +36,7 @@ describe('HttpClient.get', () => {
   })
 
   it('should succeed and return data', done => {
-    HttpClient.get<string>(mockParams).then((response: any) => {
+    HttpClient.get<string>(mockParams).then((response: string) => {
       expect(response).to.equal('get completed')
       done()
     })

@@ -37,7 +37,7 @@ describe('HttpClient.get', () => {
 
   it('should reject and return 400', done => {
     HttpClient.get<string>(mockParams)
-      .then((response: any) => {
+      .then(() => {
         // should not get in here
       })
       .catch((response: any) => {

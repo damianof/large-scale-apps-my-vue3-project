@@ -20,7 +20,7 @@
   import Loader from '@/components/shared/Loader.component.vue'
   import { useI18n } from 'vue-i18n'
 
-  const ItemsListComponent = {
+  export default defineComponent({
     components: {
       ItemComponent,
       Loader
@@ -33,7 +33,7 @@
         type: Boolean
       }
     },
-    setup(props: any, { emit }: any) {
+    setup(props, { emit }) {
       const i18n = useI18n()
 
       const onItemSelect = (item: ItemInterface) => {
@@ -45,7 +45,5 @@
         onItemSelect
       }
     }
-  }
-
-  export default defineComponent(ItemsListComponent)
+  })
 </script>
