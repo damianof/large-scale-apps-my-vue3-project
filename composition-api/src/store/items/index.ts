@@ -42,13 +42,13 @@ export const actions: ActionTree<ItemsStateInterface, RootStateInterface> = {
     // and it takes 1 second to return the data
     // by using javascript setTimeout with 1000 for the milliseconds option
     setTimeout(() => {
-      apiClient.items.fetchItems().then((data: any) => {
+      apiClient.items.fetchItems().then((data: ItemInterface[]) => {
         commit(MutationType.items.loadedItems, data)
       })
     }, 1000)
   },
   selectItem(
-    { commit }: any,
+    { commit },
     params: {
       id: number
       selected: boolean

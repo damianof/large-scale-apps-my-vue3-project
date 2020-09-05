@@ -44,10 +44,10 @@
     bodyCss: 'navy-theme'
   }])
 
-  const ThemeSelectorComponent = {
+  export default defineComponent({
     components: {
     },
-    setup(props: any, { emit }: any) {
+    setup(props, { emit }) {
       
       const onThemeClicked = (themeClicked: ThemeInfoInterface) => {
         document.body.className = ''
@@ -70,7 +70,5 @@
         onThemeClicked
       }
     }
-  }
-
-  export default defineComponent(ThemeSelectorComponent)
+  })
 </script>

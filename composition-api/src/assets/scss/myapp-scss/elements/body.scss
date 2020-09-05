@@ -13,7 +13,7 @@ body {
     font-size: 12px;
   }
 
-  #nav {
+  .nav {
     padding: 8px 0;
     a {
       font-weight: bold;
@@ -30,7 +30,7 @@ body.dark-theme {
   color: lighten(#2c3e50, 50%);
   margin: 0;
 
-  #nav {
+  .nav {
     a {
       color: darken(#42b983, 25%);
       &.router-link-exact-visited {
@@ -48,7 +48,7 @@ body.navy-theme {
   color: lighten(#2c3e50, 50%);
   margin: 0;
 
-  #nav {
+  .nav {
     a {
       color: darken(#42b983, 25%);
       &.router-link-exact-visited {

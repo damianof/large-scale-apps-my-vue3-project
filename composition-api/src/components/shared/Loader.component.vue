@@ -7,13 +7,11 @@
 <script lang="ts">
   import { defineComponent } from 'vue'
 
-  const LoaderComponent = {
+  export default defineComponent({
     props: {
       show: {
         type: Boolean
       }
     }
-  }
-
-  export default defineComponent(LoaderComponent)
+  })
 </script>
