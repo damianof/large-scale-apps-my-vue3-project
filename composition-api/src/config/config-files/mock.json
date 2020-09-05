@@ -11,5 +11,10 @@
     "apiUrls": {
       "fetchItems": "/static/data/items.json"
     }
+  },
+  "reddit": {
+    "apiUrls": {
+      "fetchSubreddit": "/static/data/reddit/subreddits/[key].json"
+    }
   }
 }

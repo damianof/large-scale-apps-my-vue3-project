@@ -1,8 +1,9 @@
 import {
   // GEN-IMPORTS
   ItemsStateInterface,
-  LocalesStateInterface
-} from '@/models/store'
+  LocalesStateInterface,
+  RedditStateInterface
+} from '../'
 
 /**
  * @name RootStoreInterface
@@ -13,5 +14,6 @@ export interface RootStoreInterface {
   // GEN-INTERFACE-PROPS
   itemsState: ItemsStateInterface
   localesState: LocalesStateInterface
+  redditState: RedditStateInterface
   // additional domain-specific module interfaces we’ll be added here in the next book chapters
 }

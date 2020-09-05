@@ -48,6 +48,14 @@
       "list": {
         "header": "I miei articoli"
       }
+    },
+    "reddit": {
+      "subreddit": {
+        "header": "Subreddit",
+        "list": {
+          "header": "Lista"
+        }
+      }
     }
   }
 }

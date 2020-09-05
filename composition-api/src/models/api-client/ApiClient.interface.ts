@@ -1,5 +1,6 @@
 // GEN-IMPORTS
-import { ItemsApiClientInterface } from './api-client/items'
+import { ItemsApiClientInterface } from '../api-client/items'
+import { RedditApiClientInterface } from '../api-client/reddit'
 
 /**
  * @Name ApiClientInterface
@@ -9,4 +10,5 @@ import { ItemsApiClientInterface } from './api-client/items'
 export interface ApiClientInterface {
   // GEN-PROPERTIES
   items: ItemsApiClientInterface
+  reddit: RedditApiClientInterface
 }

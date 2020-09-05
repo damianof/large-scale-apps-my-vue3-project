@@ -11,5 +11,10 @@
     "apiUrls": {
       "fetchItems": "/path/to/your/real/LOCAL/api/and-point"
     }
+  },
+  "reddit": {
+    "apiUrls": {
+      "fetchSubreddit": "https://www.reddit.com/r/[key].json"
+    }
   }
 }

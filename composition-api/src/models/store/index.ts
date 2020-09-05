@@ -11,3 +11,4 @@ export * from './root/RootStore.model'
 // as you add more state modules, add additional exports for those here as well
 export * from './items/ItemsState.interface'
 export * from './locales/LocalesState.interface'
+export * from './reddit/RedditState.interface'

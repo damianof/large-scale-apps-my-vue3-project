@@ -1,4 +1,7 @@
-import { ItemsApiClientUrlsInterface } from '@/models/api-client/items'
+import { 
+  ItemsApiClientUrlsInterface,
+  RedditApiClientUrlsInterface
+} from '@/models/api-client'
 
 /**
  * @Name ConfigInterface
@@ -17,5 +20,8 @@ export interface ConfigInterface {
   }
   items: {
     apiUrls: ItemsApiClientUrlsInterface
+  }
+  reddit: {
+    apiUrls: RedditApiClientUrlsInterface
   }
 }
