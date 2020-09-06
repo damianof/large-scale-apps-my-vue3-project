@@ -7,4 +7,5 @@ import { SubredditInterface } from '@/models/reddit'
  */
 export interface RedditApiClientInterface {
   fetchSubreddit: (subreddit: string) => Promise<SubredditInterface>
+  fetchSubredditPost: (permalink: string) => Promise<SubredditInterface[]>
 }

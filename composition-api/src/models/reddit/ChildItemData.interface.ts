@@ -1,4 +1,6 @@
-export interface ListingItemDataInterface {
+import { SubredditDataInterface } from './SubredditData.interface'
+
+export interface ChildItemDataInterface {
   id: string
   subreddit: string
   subreddit_name_prefixed: string
@@ -35,4 +37,6 @@ export interface ListingItemDataInterface {
   url: string
   created_utc: number
   is_video: boolean
+
+  replies: SubredditDataInterface[]
 }

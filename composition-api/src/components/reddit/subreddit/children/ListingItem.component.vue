@@ -1,18 +1,18 @@
 <template>
   <li :class="css" @click="onClick">
     <div class="selected-indicator">⋆</div>
-    <div class="name">{{ model.author }}: {{ model.title }}</div>
+    <div class="name">{{ model.data.author }}: {{ model.data.title }} {{ model.data.permalink }}</div>
   </li>
 </template>
 
 <script lang="ts">
   import { defineComponent, computed, ComponentOptionsWithObjectProps, PropType } from 'vue'
-  import { ListingItemInterface } from '@/models/reddit'
+  import { ChildItemInterface } from '@/models/reddit'
 
   export default defineComponent({
     props: {
       model: {
-        type: Object as PropType<ListingItemInterface>
+        type: Object as PropType<ChildItemInterface>
       }
     },
     setup(props, { emit }) {
@@ -22,7 +22,8 @@
       })
 
       const onClick = () => {
-        emit('select', props.model)
+        // emit permalink to parent component
+        emit('permalinkClicked', props.model?.data.permalink)
       }
 
       return {

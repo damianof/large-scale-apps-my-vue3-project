@@ -26,4 +26,17 @@ export class RedditApiClientModel implements RedditApiClientInterface {
 
     return HttpClient.get<SubredditInterface>(getParameters)
   }
+
+  fetchSubredditPost(permalink: string): Promise<SubredditInterface[]> {
+    const url = `${ this.urls.redditBaseUrl }${ permalink }.json`
+      .replace(/[\/]{2,}/gi, '/')
+
+    const getParameters: HttpRequestParamsInterface = {
+      url: url,
+      requiresToken: false
+    }
+
+    return HttpClient.get<SubredditInterface[]>(getParameters)
+  }
+
 }

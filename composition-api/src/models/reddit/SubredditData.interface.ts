@@ -1,6 +1,6 @@
-import { ListingItemInterface } from './ListingItem.interface'
+import { ChildItemInterface } from './ChildItem.interface'
 
 export interface SubredditDataInterface {
   dist: number
-  children: ListingItemInterface[]
+  children: ChildItemInterface[]
 }

@@ -14,7 +14,8 @@
   },
   "reddit": {
     "apiUrls": {
-      "fetchSubreddit": "https://www.reddit.com/r/[key].json"
+      "fetchSubreddit": "https://www.reddit.com/r/[key].json",
+      "redditBaseUrl": "https://www.reddit.com"
     }
   }
 }

@@ -7,5 +7,7 @@ import { SubredditInterface } from '@/models/reddit'
  */
 export interface RedditStateInterface {
   loading: boolean
+  loadingPost: boolean
   subreddit: SubredditInterface
+  subredditPost: SubredditInterface
 }

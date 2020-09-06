@@ -10,7 +10,7 @@
     <div id="nav" class="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
-      <router-link to="/reddit">Reddit</router-link>
+      <router-link to="/r">Reddit Playground</router-link>
     </div>
     <router-view />
   </div>

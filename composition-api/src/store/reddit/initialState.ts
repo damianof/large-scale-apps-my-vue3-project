@@ -7,8 +7,18 @@ import { RedditStateInterface } from '@/models/store'
  */
 export const initialRedditState: RedditStateInterface = {
   loading: false,
+  loadingPost: false,
   subreddit: {
     kind: 'Listing',
+    name: 'r/unknown',
+    data: {
+      dist: 0,
+      children: []
+    }
+  },
+  subredditPost: {
+    kind: 'Listing',
+    name: 'Blah',
     data: {
       dist: 0,
       children: []

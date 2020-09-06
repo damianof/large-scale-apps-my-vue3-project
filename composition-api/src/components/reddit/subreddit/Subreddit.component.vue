@@ -1,16 +1,16 @@
 <template>
   <div>
-    Type: {{ model.kind }}
-    Children: {{ model.data.children.length }}
+    [{{loading}}] Count: {{ children.length }}
     <ListingItemsList 
       :loading="loading" 
-      :items="model.data.children"/>
+      :items="children"
+      @permalinkClicked="onPermalinkClicked" />
   </div>
 </template>
 
 <script lang="ts">
-  import { defineComponent, PropType } from 'vue'
-  import { SubredditInterface, ListingItemInterface } from '@/models/reddit'
+  import { defineComponent, PropType, computed } from 'vue'
+  import { SubredditInterface } from '@/models/reddit'
   import ListingItemsList from './children/ListingItemsList.component.vue'
   import Loader from '@/components/shared/Loader.component.vue'
   import { useI18n } from 'vue-i18n'
@@ -31,13 +31,18 @@
     setup(props, { emit }) {
       const i18n = useI18n()
 
-      const onItemSelect = (item: ListingItemInterface) => {
-        emit('selectItem', item)
+      const children = computed(() => {
+        return props.model?.data.children
+      })
+
+      const onPermalinkClicked = (permalink: string) => {
+        emit('permalinkClicked', permalink)
       }
 
       return {
         i18n,
-        onItemSelect
+        children,
+        onPermalinkClicked
       }
     }
   })

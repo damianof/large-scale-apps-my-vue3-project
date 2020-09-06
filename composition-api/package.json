@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "serve": "cross-env VUE_APP_CONFIG=mock vue-cli-service serve --mode development",
+    "serve-local": "cross-env VUE_APP_CONFIG=local vue-cli-service serve --mode development",
     "build": "cross-env VUE_APP_CONFIG=live vue-cli-service build --mode production",
     "build-mock": "cross-env VUE_APP_CONFIG=mock vue-cli-service build --mode production",
     "test-mock": "cross-env VUE_APP_CONFIG=mock vue-cli-service test:unit",
