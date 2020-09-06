@@ -1,8 +1,9 @@
 <template>
   <div class="subreddit">
-    <h1>Subreddit View</h1>
-
-    <SubredditComponent :model="subreddit"/>
+    <h1>Subreddit: {{ subredditKey }}</h1>
+    <SubredditComponent 
+      :loading="loading" 
+      :model="subreddit"/>
   </div>
 </template>
 
