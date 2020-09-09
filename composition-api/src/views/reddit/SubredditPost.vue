@@ -1,7 +1,7 @@
 <template>
   <div class="subreddit">
     <div class="nav">
-      <router-link to="/r">reddit</router-link>
+      <router-link to="/r">reddit</router-link>: 
       <router-link :to="`/r/${ subredditKey }`">/r/{{ subredditKey }}</router-link>: {{ postId }}
     </div>
     <Loader v-show="loading" />
