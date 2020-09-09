@@ -8,9 +8,9 @@
       @clicked="onLocaleClicked"
     />
     <div id="nav" class="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/r">Reddit Playground</router-link>
+      <router-link to="/">Reddit Playground</router-link> |
+      <router-link to="/home">Home</router-link> |
+      <router-link to="/about">About</router-link>
     </div>
     <router-view />
   </div>

@@ -1,10 +1,16 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import Home from '../views/Home.vue'
+import Reddit from '../views/reddit/Reddit.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'Home',
+    component: Reddit // Home
+  },
+  {
+    path: '/home',
+    name: 'OldHome',
     component: Home
   },
   {

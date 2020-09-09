@@ -17,7 +17,7 @@ npm install
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+npm run serve (if you want to play with the Reddit view, use npm run serve-local so it uses the local.json config)
 ```
 
 ### Compiles and minifies for production

@@ -1,6 +1,6 @@
 <template>
   <div>
-    [{{loading}}] Count: {{ children.length }}
+    Count: {{ children.length }}
     <ListingItemsList 
       :loading="loading" 
       :items="children"

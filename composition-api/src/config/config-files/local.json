@@ -9,7 +9,8 @@
   },
   "items": {
     "apiUrls": {
-      "fetchItems": "/path/to/your/real/LOCAL/api/and-point"
+      "fetchItemsBAK": "/path/to/your/real/LOCAL/api/and-point",
+      "fetchItems": "/static/data/items.json"
     }
   },
   "reddit": {
