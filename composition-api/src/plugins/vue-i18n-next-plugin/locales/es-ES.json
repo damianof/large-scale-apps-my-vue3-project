@@ -44,6 +44,11 @@
   },
   "messages": {
     "welcome": "Bienvenido: this message is localized in Spanish",
+    "navigation": {
+      "home": "Inicio",
+      "about": "Acerca de",
+      "redditsample": "Jugando con Reddit"
+    },
     "items": {
       "list": {
         "header": "Mis cosas"

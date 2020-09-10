@@ -44,6 +44,11 @@
   },
   "messages": {
     "welcome": "Welcome: this message is localized in English",
+    "navigation": {
+      "home": "Home",
+      "about": "About",
+      "redditsample": "Reddit Playground"
+    },
     "items": {
       "list": {
         "header": "My Items"

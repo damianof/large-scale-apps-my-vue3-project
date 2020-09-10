@@ -44,6 +44,11 @@
   },
   "messages": {
     "welcome": "Bienvenue: this message is localized in French",
+    "navigation": {
+      "home": "Accueil",
+      "about": "About",
+      "redditsample": "Jouer avec Reddit"
+    },
     "items": {
       "list": {
         "header": "Mes articles"
