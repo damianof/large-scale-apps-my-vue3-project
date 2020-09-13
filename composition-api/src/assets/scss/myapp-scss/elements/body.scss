@@ -17,7 +17,7 @@ body {
     padding: 8px 0;
     a {
       font-weight: bold;
-      color: #42b983;
+      color: darken(#42b983, 15%);
       &.router-link-exact-active {
         color: #42b983;
       }
