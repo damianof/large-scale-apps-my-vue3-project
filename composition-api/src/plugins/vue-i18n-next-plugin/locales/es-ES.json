@@ -44,6 +44,10 @@
   },
   "messages": {
     "welcome": "Bienvenido: this message is localized in Spanish",
+    "navigation": {
+      "home": "Inicio",
+      "about": "Acerca de"
+    },
     "items": {
       "list": {
         "header": "Mis cosas"

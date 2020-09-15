@@ -44,6 +44,10 @@
   },
   "messages": {
     "welcome": "Bienvenue: this message is localized in French",
+    "navigation": {
+      "home": "Accueil",
+      "about": "About"
+    },
     "items": {
       "list": {
         "header": "Mes articles"
