@@ -1,4 +1,11 @@
 import { LocalesStateInterface } from '@/models/store'
+import { LocaleInfoInterface } from '@/models/localization/LocaleInfo.interface'
+import { LocalStorageKeys } from '@/models/local-storage/LocalStorageKeys'
+import { i18n } from '@/plugins/vue-i18n-next-plugin'
+import { config } from '@/config'
+
+// drive locales with config
+const availableLocales: LocaleInfoInterface[] = config.locales
 
 /**
  * @name initialLocalesState
@@ -6,30 +13,5 @@ import { LocalesStateInterface } from '@/models/store'
  * The Locales state instance
  */
 export const initialLocalesState: LocalesStateInterface = {
-  availableLocales: [
-    {
-      name: 'USA',
-      locale: 'en-US',
-      flag: 'us',
-      selected: false
-    },
-    {
-      name: 'Italy',
-      locale: 'it-IT',
-      flag: 'it',
-      selected: true // this is selected by default
-    },
-    {
-      name: 'Spain',
-      locale: 'es-ES',
-      flag: 'es',
-      selected: false
-    },
-    {
-      name: 'France',
-      locale: 'fr-FR',
-      flag: 'fr',
-      selected: false
-    }
-  ]
+  availableLocales: availableLocales
 }

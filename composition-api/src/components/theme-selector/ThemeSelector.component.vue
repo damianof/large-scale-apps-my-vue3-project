@@ -1,72 +1,34 @@
 <template>
   <div class="theme-selector">
     <div class="theme-radio-group">
-      <label
-        role="radio"
+      <ThemeRadio
         v-for="(theme, index) in themes"
         :key="index"
-        :class="`theme-radio ${ theme.name } ${theme.selected ? 'selected' : ''}`.trim()"
-      >
-        <i class="material-icons">color_lens</i>
-        <input
-          type="radio"
-          class="icon-button"
-          name="locale"
-          :value="theme.selected"
-          v-model="theme.selected"
-          @click="onThemeClicked(theme)"
-        />
-      </label>
+        :themeInfo="theme"
+        @clicked="onThemeClicked"
+      />
     </div>
   </div>
 </template>
 
 <script lang="ts">
-  import { defineComponent, reactive, onMounted, ref } from 'vue'
-
-  interface ThemeInfoInterface {
-    selected: boolean
-    name: string
-    bodyCss: string
-  }
-
-  const themes: ThemeInfoInterface[] = reactive([{
-    selected: false,
-    name: 'light',
-    bodyCss: 'default'
-  }, {
-    selected: false,
-    name: 'dark',
-    bodyCss: 'dark-theme'
-  }, {
-    selected: false,
-    name: 'navy',
-    bodyCss: 'navy-theme'
-  }])
+  import { defineComponent, PropType, onMounted } from 'vue'
+  import { ThemeInfoInterface } from '@/models/themes/ThemeInfo.interface'
+  import ThemeRadio from './ThemeRadio.component.vue'
 
   export default defineComponent({
     components: {
+      ThemeRadio
     },
-    setup(props, { emit }) {
-      
-      const onThemeClicked = (themeClicked: ThemeInfoInterface) => {
-        document.body.className = ''
-        document.body.classList.add(themeClicked.bodyCss)
-        // select only the clicked theme
-        themes.forEach(theme => {
-          theme.selected = theme.name === themeClicked.name
-        })
+    props: {
+      themes: Array as PropType<ThemeInfoInterface[]>
+    },
+    setup(props: any, { emit }: any) {
+      const onThemeClicked = (themeId: string) => {
+        emit('clicked', themeId)
       }
 
-      onMounted(() => {
-        const defaultTheme = themes.find(theme => theme.name === 'dark')
-        if (defaultTheme) {
-          onThemeClicked(defaultTheme)
-        }
-      })
-
       return {
-        themes,
         onThemeClicked
       }
     }

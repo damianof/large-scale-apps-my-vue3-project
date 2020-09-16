@@ -1,6 +1,44 @@
 {
   "global": {
   },
+  "locales": [{
+    "name": "USA",
+    "locale": "en-US",
+    "flag": "us",
+    "selected": false
+  }, {
+    "name": "Italy",
+    "locale": "it-IT",
+    "flag": "it",
+    "selected": true
+  }, {
+    "name": "Spain",
+    "locale": "es-ES",
+    "flag": "es",
+    "selected": false
+  }, {
+    "name": "France",
+    "locale": "fr-FR",
+    "flag": "fr",
+    "selected": false
+  }],
+  "themes": [{
+    "id": "default-theme",
+    "name": "Default",
+    "icon": "color_lens",
+    "selected": false
+  }, {
+    "id": "dark-theme",
+    "name": "Dark",
+    "icon": "color_lens",
+    "selected": true
+  },
+  {
+    "id": "navy-theme",
+    "name": "Navy Dark",
+    "icon": "color_lens",
+    "selected": false
+  }],
   "httpClient": {
     "tokenKey": "myapp-token"
   },
