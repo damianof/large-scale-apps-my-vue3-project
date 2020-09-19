@@ -27,10 +27,7 @@ if (process.env && process.env.VUE_APP_CONFIG) {
 // export const config: ConfigInterface = configsMap[env]
 
 // example with javascript Map()
-export const configsMap: Map<string, ConfigInterface> = new Map<
-  string,
-  ConfigInterface
->([
+export const configsMap: Map<string, ConfigInterface> = new Map<string, ConfigInterface>([
   ['mock', configMock],
   ['local', configLocal],
   ['beta', configBeta],

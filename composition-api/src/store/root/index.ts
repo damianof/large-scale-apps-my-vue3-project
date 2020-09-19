@@ -16,7 +16,6 @@ import { LocalStorageKeys } from '@/models/local-storage/LocalStorageKeys'
 // import each Vuex module
 import { itemsState } from '@/store/items'
 import { localesState } from '@/store/locales'
-import { themesState } from '@/store/themes'
 
 // Vuex store options to build our modularized namespaced store
 const storeOptions: StoreOptions<RootStateInterface> = {
@@ -25,32 +24,22 @@ const storeOptions: StoreOptions<RootStateInterface> = {
   modules: {
     // GEN-MODULES
     itemsState,
-    localesState,
-    themesState
+    localesState
     // as you create additional modules, you'll add them here similar to the itemsState
   }
 }
 
 // Vuex Root store instance
-export const store: RootStoreModel<RootStateInterface> = <any>(
-  createStore(storeOptions)
-)
-
+export const store: RootStoreModel<RootStateInterface> = <any>createStore(storeOptions)
 
 // for the current locale,
 // try using the last user's preferred locale
 // if available from localStorage
-const userPreferredLocaleId: string = (localStorage.getItem(LocalStorageKeys.locale)  || '')
+const userPreferredLocaleId: string = localStorage.getItem(LocalStorageKeys.locale) || ''
 if (userPreferredLocaleId.length > 0) {
   // change locale selected
-  store.dispatch(`${StoreModuleNames.localesState}/${MutationType.locales.selectLocale}`, userPreferredLocaleId)
-}
-
-// for the current theme,
-// try using the last user's preferred theme
-// if available from localStorage
-const userPreferredThemeId: string = localStorage.getItem(LocalStorageKeys.theme) || ''
-if (userPreferredThemeId.length > 0) {
-  // change theme selected
-  store.dispatch(`${StoreModuleNames.themesState}/${MutationType.themes.selectTheme}`, userPreferredThemeId)
+  store.dispatch(
+    `${StoreModuleNames.localesState}/${MutationType.locales.selectLocale}`,
+    userPreferredLocaleId
+  )
 }

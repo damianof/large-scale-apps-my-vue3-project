@@ -1,8 +1,5 @@
 <template>
-  <label
-    role="radio"
-    :class="`locale-radio ${localeInfo.selected ? 'selected' : ''}`.trim()"
-  >
+  <label role="radio" :class="`locale-radio ${localeInfo.selected ? 'selected' : ''}`.trim()">
     <i :class="`flag-icons ${localeInfo.flag}`"></i>
     <input
       type="radio"
