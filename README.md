@@ -5,8 +5,9 @@
 https://leanpub.com/large-scale-apps-with-vue3-and-typescript "Large Scale Apps with Vue 3 and TypeScript")
 
 ### Running Samples:
-(Note: this will get costantly updated as more chapters are added tot he book)
-[largescaleapps.com] (http://www.largescaleapps.com)
+(Note: these are costantly updated as more chapters are added to the book)
+[www.largescaleapps.com](
+http://www.largescaleapps.com "www.largescaleapps.com")
 
 ### Sample Project
 The main sample project is located under the composition-api/ sub-directory in this repository.
