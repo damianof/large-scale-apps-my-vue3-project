@@ -1,6 +1,6 @@
 import { ItemsApiClientUrlsInterface } from '@/models/api-client/items'
 import { LocaleInfoInterface } from '@/models/localization/LocaleInfo.interface'
-import { ThemeInfoInterface } from '@/components-standalone'
+import { ThemeInfoInterface } from 'my-component-library'
 
 /**
  * @Name ConfigInterface

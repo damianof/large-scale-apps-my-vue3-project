@@ -20,7 +20,7 @@
   import { config } from '@/config'
   import { LocaleInfoInterface } from '@/models/localization/LocaleInfo.interface'
   import LocaleSelector from '@/components/locale-selector/LocaleSelector.component.vue'
-  import { ThemeSelector } from '@/components-standalone'
+  import { ThemeSelector } from 'my-component-library'
 
   export default defineComponent({
     name: 'App',

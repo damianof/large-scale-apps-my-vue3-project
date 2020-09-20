@@ -1,0 +1,30 @@
+{
+  "name": "my-component-library",
+  "version": "0.1.0",
+  "private": true,
+  "main": "lib/my-component-library.umd.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build-lib": "vue-cli-service build --target lib src/index.ts && rm lib/demo.html",
+    "build-types": "tsc --emitDeclarationOnly",
+    "build": "npm run build-lib && npm run build-types",
+    "pack": "npm pack && mv ./my-component-library-0.1.0.tgz ../my-component-library-0.1.0.tgz",
+    "all": "npm run build && npm run pack"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "vue": "^3.0.0-0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.11",
+    "@types/mocha": "^5.2.4",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-typescript": "~4.5.0",
+    "@vue/cli-plugin-unit-mocha": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0-0",
+    "@vue/test-utils": "^2.0.0-0",
+    "chai": "^4.1.2",
+    "typescript": "~3.9.3"
+  }
+}
