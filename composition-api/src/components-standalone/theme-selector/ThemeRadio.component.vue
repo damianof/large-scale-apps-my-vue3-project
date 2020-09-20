@@ -1,12 +1,5 @@
 <template>
-  <label
-    role="radio"
-    :class="
-      `theme-radio ${themeInfo.id} ${
-        themeInfo.selected ? 'selected' : ''
-      }`.trim()
-    "
-  >
+  <label role="radio" :class="cssClass">
     <i class="material-icons">{{ themeInfo.icon }}</i>
     <input
       type="radio"
@@ -21,7 +14,7 @@
 
 <script lang="ts">
   import { defineComponent, reactive, computed, PropType } from 'vue'
-  import { ThemeInfoInterface } from '@/models/themes/ThemeInfo.interface'
+  import { ThemeInfoInterface } from './models/ThemeInfo.interface'
 
   export default defineComponent({
     props: {
@@ -29,9 +22,15 @@
         type: Object as PropType<ThemeInfoInterface>
       }
     },
-    setup(props: any, { emit }: any) {
+    computed: {
+      cssClass(): string {
+        const themeInfo = this.$props.themeInfo
+        return `theme-radio ${themeInfo?.id} ${themeInfo?.selected ? 'selected' : ''}`.trim()
+      }
+    },
+    setup(props, { emit }) {
       const onClick = () => {
-        emit('clicked', props.themeInfo.id)
+        emit('clicked', props.themeInfo?.id)
       }
 
       return {

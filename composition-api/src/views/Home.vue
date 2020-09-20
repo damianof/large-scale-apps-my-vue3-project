@@ -1,10 +1,6 @@
 <template>
   <div class="home">
-    <ItemsListComponent
-      :items="items"
-      :loading="loading"
-      @selectItem="onSelectItem"
-    />
+    <ItemsListComponent :items="items" :loading="loading" @selectItem="onSelectItem" />
   </div>
 </template>
 
@@ -29,19 +25,14 @@
       })
 
       onMounted(() => {
-        store.dispatch(
-          `${StoreModuleNames.itemsState}/${MutationType.items.loadItems}`
-        )
+        store.dispatch(`${StoreModuleNames.itemsState}/${MutationType.items.loadItems}`)
       })
 
       const onSelectItem = (item: ItemInterface) => {
-        store.dispatch(
-          `${StoreModuleNames.itemsState}/${MutationType.items.selectItem}`,
-          {
-            id: item.id,
-            selected: !item.selected
-          }
-        )
+        store.dispatch(`${StoreModuleNames.itemsState}/${MutationType.items.selectItem}`, {
+          id: item.id,
+          selected: !item.selected
+        })
       }
 
       return {

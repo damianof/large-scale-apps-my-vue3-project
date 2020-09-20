@@ -17,11 +17,7 @@ interface LocalesDataInterface {
  */
 const getLocalesData = (): LocalesDataInterface => {
   // we use require.context to get all the .json files under the locales sub-directory
-  const files = (require as any).context(
-    './locales',
-    true,
-    /[A-Za-z0-9-_,\s]+\.json$/i
-  )
+  const files = (require as any).context('./locales', true, /[A-Za-z0-9-_,\s]+\.json$/i)
   // create the instance that will hold the loaded data
   const localeData: LocalesDataInterface = {
     datetimeFormats: {},

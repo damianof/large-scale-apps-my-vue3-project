@@ -1,10 +1,6 @@
 import { Module, MutationTree, ActionTree, GetterTree } from 'vuex'
 
-import {
-  MutationType,
-  RootStateInterface,
-  LocalesStateInterface
-} from '@/models/store'
+import { MutationType, RootStateInterface, LocalesStateInterface } from '@/models/store'
 
 import { initialLocalesState } from './initialState'
 

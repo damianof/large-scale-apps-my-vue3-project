@@ -3,12 +3,7 @@
     <h3>{{ i18n.t('items.list.header') }}:</h3>
     <Loader v-show="loading" />
     <ul v-show="!loading">
-      <ItemComponent
-        v-for="item in items"
-        :key="item.id"
-        :model="item"
-        @select="onItemSelect"
-      />
+      <ItemComponent v-for="item in items" :key="item.id" :model="item" @select="onItemSelect" />
     </ul>
   </div>
 </template>

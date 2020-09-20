@@ -1,6 +1,6 @@
 import { ItemsApiClientUrlsInterface } from '@/models/api-client/items'
 import { LocaleInfoInterface } from '@/models/localization/LocaleInfo.interface'
-import { ThemeInfoInterface } from '@/models/themes/ThemeInfo.interface'
+import { ThemeInfoInterface } from '@/components-standalone'
 
 /**
  * @Name ConfigInterface
@@ -23,7 +23,7 @@ export interface ConfigInterface {
   apiClient: {
     type: string
   }
-  
+
   items: {
     apiUrls: ItemsApiClientUrlsInterface
   }
