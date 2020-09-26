@@ -1,6 +1,6 @@
 import { ApiClientInterface } from '@/models/api-client/ApiClient.interface'
-import apiMockClient from '@/api-client/mock'
-import apiLiveClient from '@/api-client/live'
+import apiMockClient from './mock'
+import apiLiveClient from './live'
 import { config } from '@/config'
 
 // return either the live or the mock client

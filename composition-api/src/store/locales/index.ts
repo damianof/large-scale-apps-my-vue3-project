@@ -1,13 +1,14 @@
 import { Module, MutationTree, ActionTree, GetterTree } from 'vuex'
-
 import { MutationType, RootStateInterface, LocalesStateInterface } from '@/models/store'
-
 import { initialLocalesState } from './initialState'
-
-import { LocaleInfoInterface } from '@/models/localization/LocaleInfo.interface'
 import { i18n } from '@/plugins/vue-i18n-next-plugin'
 import { LocalStorageKeys } from '@/models/local-storage/LocalStorageKeys'
 
+/**
+ * @name mutations
+ * @description
+ * Vuex Locales mutations
+ */
 export const mutations: MutationTree<LocalesStateInterface> = {
   selectLocale(state: LocalesStateInterface, localeId: string) {
     // set only the model selected to true
@@ -23,6 +24,11 @@ export const mutations: MutationTree<LocalesStateInterface> = {
   }
 }
 
+/**
+ * @name actions
+ * @description
+ * Vuex Locales actions
+ */
 export const actions: ActionTree<LocalesStateInterface, RootStateInterface> = {
   selectLocale({ commit }, localeId: string) {
     commit(MutationType.locales.selectLocale, localeId)

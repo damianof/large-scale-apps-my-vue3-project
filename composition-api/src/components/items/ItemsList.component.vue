@@ -11,7 +11,7 @@
 <script lang="ts">
   import { defineComponent, PropType } from 'vue'
   import { ItemInterface } from '@/models/items/Item.interface'
-  import ItemComponent from '@/components/items/children/Item.component.vue'
+  import ItemComponent from './children/Item.component.vue'
   import Loader from '@/components/shared/Loader.component.vue'
   import { useI18n } from 'vue-i18n'
 

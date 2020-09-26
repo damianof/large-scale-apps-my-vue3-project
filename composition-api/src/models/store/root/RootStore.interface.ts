@@ -1,10 +1,6 @@
-import {
-  // GEN-IMPORTS
-  ItemsStateInterface,
-  LocalesStateInterface
-} from '@/models/store'
-
-//import { RootStateInterface } from './RootState.interface'
+// GEN-IMPORTS
+import { ItemsStateInterface } from '../items/ItemsState.interface'
+import { LocalesStateInterface } from '../locales/LocalesState.interface'
 
 /**
  * @name RootStoreInterface
@@ -12,7 +8,6 @@ import {
  * Wraps together each store module interface in one place
  */
 export interface RootStoreInterface {
-  //extends RootStateInterface {
   // GEN-INTERFACE-PROPS
   itemsState: ItemsStateInterface
   localesState: LocalesStateInterface

@@ -1,5 +1,5 @@
 // GEN-IMPORTS
-import { ItemsApiClientInterface } from './api-client/items'
+import { ItemsApiClientInterface } from './items'
 
 /**
  * @Name ApiClientInterface

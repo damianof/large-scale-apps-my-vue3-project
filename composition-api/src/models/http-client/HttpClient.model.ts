@@ -1,4 +1,4 @@
-import axios, { AxiosRequestConfig, AxiosError, AxiosResponse } from 'axios'
+import axios, { AxiosRequestConfig, AxiosResponse } from 'axios'
 import { HttpRequestParamsInterface } from './HttpRequestParams.interface'
 import { HttpClientInterface } from './HttpClient.interface'
 import { config } from '@/config'
@@ -37,12 +37,12 @@ export class HttpClientModel implements HttpClientInterface {
 
       axios
         .get(url, options)
-        .then((response: any) => {
+        .then((response: AxiosResponse) => {
           resolve(response.data as T)
         })
-        .catch((response: any) => {
+        .catch((error: AxiosResponse) => {
           console.info('------ rejecting ----')
-          reject(response)
+          reject(error)
         })
     })
   }
@@ -63,11 +63,11 @@ export class HttpClientModel implements HttpClientInterface {
 
       axios
         .post(url, payload, options)
-        .then((response: any) => {
+        .then((response: AxiosResponse) => {
           resolve(response.data as T)
         })
-        .catch((response: any) => {
-          reject(response)
+        .catch((error: AxiosResponse) => {
+          reject(error)
         })
     })
   }

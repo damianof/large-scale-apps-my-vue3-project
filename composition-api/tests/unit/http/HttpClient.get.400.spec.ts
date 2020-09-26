@@ -1,6 +1,6 @@
 import { expect } from 'chai'
 import sinon from 'sinon'
-import axios, { AxiosRequestConfig } from 'axios'
+import axios, { AxiosRequestConfig, AxiosResponse } from 'axios'
 import { HttpClient, HttpRequestParamsInterface } from '@/models/http-client'
 import { MockedPromiseFactory } from './MockedPromiseFactory'
 
@@ -40,7 +40,7 @@ describe('HttpClient.get', () => {
       .then(() => {
         // should not get in here
       })
-      .catch((response: any) => {
+      .catch((response: AxiosResponse) => {
         expect(response.status).to.equal(400)
         done()
       })

@@ -7,7 +7,7 @@ export * from './root/RootState.interface'
 export * from './root/RootStore.interface'
 // export the RootStore model
 export * from './root/RootStore.model'
-// GEN-EXPORTS
 // as you add more state modules, add additional exports for those here as well
+// GEN-EXPORTS
 export * from './items/ItemsState.interface'
 export * from './locales/LocalesState.interface'

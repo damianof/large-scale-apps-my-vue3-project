@@ -7,6 +7,11 @@ import { initialItemsState } from './initialState'
 import { ItemInterface } from '@/models/items/Item.interface'
 import apiClient from '@/api-client'
 
+/**
+ * @name mutations
+ * @description
+ * Vuex Items mutations
+ */
 export const mutations: MutationTree<ItemsStateInterface> = {
   loadingItems(state: ItemsStateInterface) {
     state.loading = true
@@ -30,6 +35,11 @@ export const mutations: MutationTree<ItemsStateInterface> = {
   }
 }
 
+/**
+ * @name actions
+ * @description
+ * Vuex Items actions
+ */
 export const actions: ActionTree<ItemsStateInterface, RootStateInterface> = {
   loadItems({ commit }) {
     commit(MutationType.items.loadingItems)
@@ -54,12 +64,22 @@ export const actions: ActionTree<ItemsStateInterface, RootStateInterface> = {
   }
 }
 
+/**
+ * @name getters
+ * @description
+ * Vuex Items getters
+ */
 export const getters: GetterTree<ItemsStateInterface, RootStateInterface> = {}
 
 // create our Items store instance
 const namespaced: boolean = true
 const state: ItemsStateInterface = initialItemsState
 
+/**
+ * @name itemsState
+ * @description
+ * Vuex Items store
+ */
 export const itemsState: Module<ItemsStateInterface, RootStateInterface> = {
   namespaced,
   state,
