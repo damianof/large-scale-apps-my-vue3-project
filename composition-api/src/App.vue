@@ -15,9 +15,9 @@
 <script lang="ts">
   import { defineComponent, computed } from 'vue'
   import { useI18n } from 'vue-i18n'
-  import { MutationType } from '@/models/store'
-  import { useLocalesStore } from '@/store'
   import { config } from '@/config'
+  import { MutationType } from '@/models/store'
+  import { useLocalesStore } from '@/store/locales'
   import { LocaleInfoInterface } from '@/models/localization/LocaleInfo.interface'
   import LocaleSelector from '@/components/locale-selector/LocaleSelector.component.vue'
   import { ThemeSelector } from 'my-component-library'
@@ -39,10 +39,7 @@
       const availableThemes = config.themes
 
       const onLocaleClicked = (localeInfo: LocaleInfoInterface) => {
-        localesStore.action(
-          MutationType.locales.selectLocale,
-          localeInfo.locale
-        )
+        localesStore.action(MutationType.locales.selectLocale, localeInfo.locale)
       }
 
       return {
