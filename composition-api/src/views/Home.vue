@@ -6,7 +6,7 @@
 
 <script lang="ts">
   import { defineComponent, computed, onMounted } from 'vue'
-  import { useItemsStore } from '@/store'
+  import { useItemsStore } from '@/store/items'
   import { MutationType, StoreModuleNames } from '@/models/store'
   import ItemsListComponent from '@/components/items/ItemsList.component.vue'
   import { ItemInterface } from '@/models/items/Item.interface'
