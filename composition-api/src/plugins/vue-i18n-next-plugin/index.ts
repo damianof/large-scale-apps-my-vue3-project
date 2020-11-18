@@ -1,14 +1,15 @@
 import {
-  createI18n
-  // LocaleMessages, // TODO: see if vue-i18n@next alpha 13 has a type for this
-  // DateTimeFormat, // TODO: see if vue-i18n@next alpha 13 has a type for this
-  // NumberFormats // TODO: see if vue-i18n@next alpha 13 has a type for this
+  createI18n,
+  VueMessageType,
+  LocaleMessages,
+  //DateTimeFormat, // TODO: see if vue-i18n@next alpha 13 has a type for this
+  //NumberFormats // TODO: see if vue-i18n@next alpha 13 has a type for this
 } from 'vue-i18n'
 
 interface LocalesDataInterface {
-  datetimeFormats: any // DateTimeFormats // TODO: see if vue-i18n@next alpha 13 has a type for this
-  numberFormats: any // NumberFormats // TODO: see if vue-i18n@next alpha 13 has a type for this
-  messages: any // LocaleMessages // TODO: see if vue-i18n@next alpha 13 has a type for this
+  datetimeFormats: any // TODO: see if vue-i18n@next alpha 13 has a type for this
+  numberFormats: any // TODO: see if vue-i18n@next alpha 13 has a type for this
+  messages: LocaleMessages<VueMessageType> 
 }
 
 /**

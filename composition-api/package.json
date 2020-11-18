@@ -19,16 +19,15 @@
     "axios": "^0.19.2",
     "my-component-library": "file:../my-component-library-0.1.0.tgz",
     "vue": "^3.0.0-0",
-    "vue-i18n": "^9.0.0-alpha.13",
+    "vue-i18n": "^9.0.0-beta.8",
+    "vue-loader-v16": "npm:vue-loader@16.0.0-beta.7",
     "vue-router": "^4.0.0-0",
-    "vuex": "^4.0.0-0",
-    "vue-loader-v16": "npm:vue-loader@16.0.0-beta.7"
+    "vuex": "^4.0.0-0"
   },
   "devDependencies": {
     "@types/chai": "^4.2.11",
     "@types/mocha": "^5.2.4",
     "@types/sinon": "^9.0.4",
-    "@types/vue-i18n": "^7.0.0",
     "@vue/cli-plugin-router": "~4.5.4",
     "@vue/cli-plugin-typescript": "~4.5.4",
     "@vue/cli-plugin-unit-mocha": "~4.5.4",
