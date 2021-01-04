@@ -11,7 +11,7 @@
   import ItemsListComponent from '@/components/items/ItemsList.component.vue'
   import { ItemInterface } from '@/models/items/Item.interface'
 
-  const HomeView = {
+  export default defineComponent({
     name: 'Home',
     components: {
       ItemsListComponent
@@ -42,7 +42,5 @@
         onSelectItem
       }
     }
-  }
-
-  export default defineComponent(HomeView)
+  })
 </script>
