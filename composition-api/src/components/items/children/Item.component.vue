@@ -15,6 +15,7 @@
         type: Object as PropType<ItemInterface>
       }
     },
+    emits: ['select'],
     setup(props, { emit }) {
       const css = computed(() => {
         let css = 'item'

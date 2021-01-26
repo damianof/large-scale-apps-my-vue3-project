@@ -24,6 +24,7 @@
         type: Object
       }
     },
+    emits: ['clicked'],
     setup(props, { emit }) {
       const i18n = useI18n()
 

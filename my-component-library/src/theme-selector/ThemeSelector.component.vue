@@ -28,6 +28,7 @@
         return Store.state.themes
       }
     },
+    emits: ['themeClicked', 'themeChanged'],
     setup(props, { emit }) {
       // handles theme radio click:
       const changeTheme = (themeId: string) => {

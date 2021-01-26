@@ -28,6 +28,7 @@
         return `theme-radio ${themeInfo?.id} ${themeInfo?.selected ? 'selected' : ''}`.trim()
       }
     },
+    emits: ['clicked'],
     setup(props, { emit }) {
       const onClick = () => {
         emit('clicked', props.themeInfo?.id)
