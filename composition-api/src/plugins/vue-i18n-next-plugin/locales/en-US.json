@@ -46,7 +46,8 @@
     "welcome": "Welcome: this message is localized in English",
     "navigation": {
       "home": "Home",
-      "about": "About"
+      "about": "About",
+      "primitives": "Primitives"
     },
     "items": {
       "list": {

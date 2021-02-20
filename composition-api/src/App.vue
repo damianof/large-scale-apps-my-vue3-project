@@ -6,7 +6,8 @@
     <ThemeSelector :availableThemes="availableThemes" />
     <div id="nav" class="nav">
       <router-link to="/">{{ i18n.t('navigation.home') }}</router-link> |
-      <router-link to="/about">{{ i18n.t('navigation.about') }}</router-link>
+      <router-link to="/about">{{ i18n.t('navigation.about') }}</router-link> |
+      <router-link to="/primitives">{{ i18n.t('navigation.primitives') }}</router-link>
     </div>
     <router-view />
   </div>

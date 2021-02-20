@@ -46,7 +46,8 @@
     "welcome": "Bienvenido: this message is localized in Spanish",
     "navigation": {
       "home": "Inicio",
-      "about": "Acerca de"
+      "about": "Acerca de",
+      "primitives": "Primitivos"
     },
     "items": {
       "list": {

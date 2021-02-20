@@ -46,7 +46,8 @@
     "welcome": "Bienvenue: this message is localized in French",
     "navigation": {
       "home": "Accueil",
-      "about": "À propos de nous"
+      "about": "À propos de nous",
+      "primitives": "Primitifs"
     },
     "items": {
       "list": {
