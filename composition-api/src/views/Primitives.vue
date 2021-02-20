@@ -58,6 +58,7 @@
         console.log(`You clicked the "${key}" toggle`)
         const stateItem = toggleButtonsState.state.find(item => item.key === key)
         if (stateItem) {
+          // toggle the value of the ElToggle that was clicked
           stateItem.checked = !stateItem.checked
         }
       }
