@@ -1,26 +1,41 @@
 <template>
   <li :class="css" @click="onClick">
-    <div class="selected-indicator">⋆</div>
-    <div class="name">{{ model.name }}</div>
+    <ElText tag="div" :text="model.name"/>
+    <ElToggle :checked="model.selected" addCss="ml-2"/>
   </li>
 </template>
 
 <script lang="ts">
   import { defineComponent, computed, PropType } from 'vue'
   import { ItemInterface } from '@/models/items/Item.interface'
+  import ElText from '@/components/primitives/text/ElText.vue'
+  import ElToggle from '@/components/primitives/toggles/ElToggle.vue'
 
   export default defineComponent({
+    components: {
+      ElText,
+      ElToggle
+    },
     props: {
       model: {
         type: Object as PropType<ItemInterface>
+      },
+      isLast: {
+        type: Boolean,
+        default: true
       }
     },
     emits: ['select'],
     setup(props, { emit }) {
       const css = computed(() => {
-        let css = 'item'
+        let css = 'flex items-center justify-between cursor-pointer border border-l-4 list-none rounded-sm px-3 py-3'
         if (props.model?.selected) {
-          css += ' selected'
+          css += ' font-bold bg-pink-200 hover:bg-pink-100'
+        } else {
+          css += ' text-gray-500 hover:bg-gray-100'
+        }
+        if (!props.isLast) {
+          css += ' border-b-0'
         }
         return css.trim()
       })
