@@ -47,7 +47,8 @@
     "navigation": {
       "home": "Home",
       "about": "About",
-      "primitives": "Primitives"
+      "primitives": "Primitives",
+      "widgetsPlayground": "Widgets Playground"
     },
     "items": {
       "list": {

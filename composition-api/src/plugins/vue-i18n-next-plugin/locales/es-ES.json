@@ -47,7 +47,8 @@
     "navigation": {
       "home": "Inicio",
       "about": "Acerca de",
-      "primitives": "Primitivos"
+      "primitives": "Primitivos",
+      "widgetsPlayground": "Widgets Playground"
     },
     "items": {
       "list": {
