@@ -1,6 +1,6 @@
 <template>
   <li :class="css" @click="onClick">
-    <ElText tag="div" :text="model.name"/>
+    <ElText tag="div" :text="model.name" addCss="name"/>
     <ElToggle :checked="model.selected" addCss="ml-2"/>
   </li>
 </template>
@@ -28,9 +28,9 @@
     emits: ['select'],
     setup(props, { emit }) {
       const css = computed(() => {
-        let css = 'flex items-center justify-between cursor-pointer border border-l-4 list-none rounded-sm px-3 py-3'
+        let css = 'item flex items-center justify-between cursor-pointer border border-l-4 list-none rounded-sm px-3 py-3'
         if (props.model?.selected) {
-          css += ' font-bold bg-pink-200 hover:bg-pink-100'
+          css += ' font-bold bg-pink-200 hover:bg-pink-100 selected'
         } else {
           css += ' text-gray-500 hover:bg-gray-100'
         }

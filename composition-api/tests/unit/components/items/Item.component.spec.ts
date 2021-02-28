@@ -1,5 +1,5 @@
 import { expect } from 'chai'
-import { shallowMount } from '@vue/test-utils'
+import { mount } from '@vue/test-utils'
 import ItemComponent from '@/components/items/children/Item.component.vue'
 import { ItemInterface } from '@/models/items/Item.interface'
 
@@ -11,11 +11,17 @@ describe('Item.component.vue', () => {
       selected: false
     }
 
-    const wrapper = shallowMount(ItemComponent, {
+    const wrapper = mount(ItemComponent, {
       props: {
-        model: model
+        model: model,
+        isLast: false
       }
     })
+
+    const classes = wrapper.classes()
+    expect(classes)
+      .to.be.an('array')
+      .that.includes('item')
 
     // this just tests that the entire text rendered by the component somewhere rendered
     // 'Unit test item 1', but this is not very precise.
@@ -33,9 +39,10 @@ describe('Item.component.vue', () => {
       selected: false
     }
 
-    const wrapper = shallowMount(ItemComponent, {
+    const wrapper = mount(ItemComponent, {
       props: {
-        model: model
+        model: model,
+        isLast: false
       }
     })
 
@@ -56,9 +63,10 @@ describe('Item.component.vue', () => {
       selected: true /* setting selected = true here */
     }
 
-    const wrapper = shallowMount(ItemComponent, {
+    const wrapper = mount(ItemComponent, {
       props: {
-        model: model
+        model: model,
+        isLast: false
       }
     })
 
@@ -67,9 +75,8 @@ describe('Item.component.vue', () => {
     expect(classes)
       .to.be.an('array')
       .that.includes('item')
-
-    expect(classes)
-      .to.be.an('array')
-      .that.includes('selected')
+      expect(classes)
+        .to.be.an('array')
+        .that.includes('selected')
   })
 })

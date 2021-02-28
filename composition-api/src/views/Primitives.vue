@@ -17,7 +17,7 @@
     <div class="p-6 border">
       <ElToggle :checked="toggleButtonsState.state.find(item => item.key === 'a').checked" :disabled="false" @clicked="onToggleClicked('a')"/>
       <ElToggle :checked="toggleButtonsState.state.find(item => item.key === 'b').checked" :disabled="true" addCss="ml-2" @clicked="onToggleClicked('b')"/>
-      <ElToggle :checked="toggleButtonsState.state.find(item => item.key === 'c').checked" :disabled="false" @clicked="onToggleClicked('c')"/>
+      <ElToggle :checked="toggleButtonsState.state.find(item => item.key === 'c').checked" :disabled="false" addCss="ml-2" @clicked="onToggleClicked('c')"/>
     </div>
   </div>
 </template>
