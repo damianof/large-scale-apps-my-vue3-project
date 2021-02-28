@@ -12,9 +12,9 @@
         <ElButton :disabled="false" label="Add ListItems Widget to 2" addCss="mt-1" @clicked="addWidget($refs.container2, 'items', 0)"/>
       </div>
     </div>
-    <div class="max-w-lg mx-auto grid gap-5 lg:grid-cols-2 lg:max-w-none">
-      <WidgetsContainer :containerId="1" ref="container1" name="cont-1" title="Container 1" />
-      <WidgetsContainer :containerId="2" ref="container2" name="cont-2" title="Container 2" />
+    <div class="mt-3 max-w-lg mx-auto grid gap-5 lg:grid-cols-2 lg:max-w-none">
+      <WidgetsContainer :containerId="1" ref="container1" name="cont-1" title="Container 1" addCss="border p-3 bg-yellow-100" />
+      <WidgetsContainer :containerId="2" ref="container2" name="cont-2" title="Container 2" addCss="border p-3 bg-green-100" />
     </div>
   </div>
 </template>

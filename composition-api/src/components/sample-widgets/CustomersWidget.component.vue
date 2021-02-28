@@ -1,11 +1,11 @@
 <template>
   <ElBaseCard :class="cssClasses">
-		<ElWidgetHeader
+    <ElWidgetHeader
       :id="id"
       headerText="Customer Widget"
       @close="onCloseClick"
     />
-    <div class="card-body">
+    <div class="card-body p-4">
       <div>
         Customer widget
       </div>

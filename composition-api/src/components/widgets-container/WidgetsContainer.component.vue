@@ -48,7 +48,7 @@
         type: String,
         default: 'not-set'
       },
-      addCssClasses: {
+      addCss: {
         type: String,
         default: ''
       }
@@ -58,9 +58,9 @@
       return {
         cssClasses: computed((): string => {
           const classes = ['widgets-container']
-          const addCssClasses = (props.addCssClasses || '').trim()
-          if (addCssClasses) {
-            classes.push(addCssClasses)
+          const addCss = (props.addCss || '').trim()
+          if (addCss) {
+            classes.push(addCss)
           }
           return classes.join(' ')
         }),

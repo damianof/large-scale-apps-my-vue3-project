@@ -32,8 +32,7 @@ export class Mutations implements MutationsInterface {
     childInfo.id = this.nextId()
     childInfo.props.id = childInfo.id
 
-    this.state.widgets.push(childInfo)
-    //this.state.widgets.splice(childInfo.position, 0, childInfo)
+    this.state.widgets.push(childInfo) // add to the bottom of the list
     
     this.state.addingWidget = false
   }

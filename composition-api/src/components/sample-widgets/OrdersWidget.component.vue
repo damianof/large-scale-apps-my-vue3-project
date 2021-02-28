@@ -5,7 +5,7 @@
       headerText="Orders Widget"
       @close="onCloseClick"
     />
-    <div class="card-body">
+    <div class="card-body p-4">
       Order widget
       <ul>
         <li>Order 1</li>
