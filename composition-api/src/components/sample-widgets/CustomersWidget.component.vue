@@ -1,6 +1,10 @@
 <template>
   <ElBaseCard :class="cssClasses">
-		<!-- will replace this place holder here with more code later -->
+		<ElWidgetHeader
+      :id="id"
+      headerText="Customer Widget"
+      @close="onCloseClick"
+    />
     <div class="card-body">
       <div>
         Customer widget
@@ -12,6 +16,7 @@
 <script lang="ts">
   import { defineComponent } from 'vue'
   import ElBaseCard from '@/components/primitives/cards/ElBaseCard.component.vue'
+  import ElWidgetHeader from '@/components/primitives/cards/ElWidgetHeader.component.vue'
   import WidgetBase from '@/components//widgets-container/BaseWidget.component.vue'
 
   export default defineComponent({
@@ -19,6 +24,7 @@
     name: "CustomersWidget",
     components: {
       ElBaseCard,
+      ElWidgetHeader,
       WidgetBase
     }
   })

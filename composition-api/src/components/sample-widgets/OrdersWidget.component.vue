@@ -1,12 +1,12 @@
 <template>
   <ElBaseCard :class="cssClasses">
-		<!-- will replace this place holder here with more code later -->
-    <div class="card-header">
-      <div>
-        Orders widget
-      </div>
-    </div>
+		<ElWidgetHeader
+      :id="id"
+      headerText="Orders Widget"
+      @close="onCloseClick"
+    />
     <div class="card-body">
+      Order widget
       <ul>
         <li>Order 1</li>
         <li>Order 2</li>
@@ -19,6 +19,7 @@
 <script lang="ts">
   import { defineComponent } from 'vue'
   import ElBaseCard from '@/components/primitives/cards/ElBaseCard.component.vue'
+  import ElWidgetHeader from '@/components/primitives/cards/ElWidgetHeader.component.vue'
   import WidgetBase from '@/components//widgets-container/BaseWidget.component.vue'
 
   export default defineComponent({
@@ -26,6 +27,7 @@
     name: "OrdersWidget",
     components: {
       ElBaseCard,
+      ElWidgetHeader,
       WidgetBase
     }
   })
