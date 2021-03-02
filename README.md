@@ -2,7 +2,7 @@
 <img src="composition-api/readme-images/book-vue3-300px.png" width="80px" /> 
 
 [Large Scale Apps with Vue 3 and TypeScript](
-https://leanpub.com/large-scale-apps-with-vue3-and-typescript "Large Scale Apps with Vue 3 and TypeScript")
+https://vuetypescript.com/?ref=gitrepo "Large Scale Apps with Vue 3 and TypeScript")
 
 ### Running Samples:
 (Note: these are costantly updated as more chapters are added to the book)
