@@ -19,6 +19,7 @@
   import { useI18n } from 'vue-i18n'
 
   export default defineComponent({
+    name: 'ItemsListComponent',
     components: {
       ItemComponent,
       Loader

@@ -31,24 +31,30 @@
       ThemeSelector
     },
     setup() {
-      const i18n = useI18n()
+      // private:
       const localesStore = useLocalesStore()
 
+      // helpers/shortcuts:
+      const i18n = useI18n()
+      const availableThemes = config.themes
+
+      // computed:
       const availableLocales = computed(() => {
         return localesStore.state.availableLocales
       })
 
-      const availableThemes = config.themes
-
+      // methods:
       const onLocaleClicked = (localeInfo: LocaleInfoInterface) => {
         localesStore.action(MutationType.locales.selectLocale, localeInfo.locale)
       }
 
       return {
         i18n,
+        availableThemes,
+        // computed:
         availableLocales,
-        onLocaleClicked,
-        availableThemes
+        // methods:
+        onLocaleClicked
       }
     }
   })

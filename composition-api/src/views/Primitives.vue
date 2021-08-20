@@ -50,6 +50,7 @@
         }]
       })
 
+      // methods:
       const onButtonClick = (key: string) => {
         console.log(`You clicked the "${key}" button`)
       }
@@ -65,6 +66,7 @@
 
       return {
         toggleButtonsState,
+        // methods:
         onButtonClick,
         onToggleClicked
       }

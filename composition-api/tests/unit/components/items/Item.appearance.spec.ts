@@ -3,7 +3,7 @@ import { mount } from '@vue/test-utils'
 import ItemComponent from '@/components/items/children/Item.component.vue'
 import { ItemInterface } from '@/models/items/Item.interface'
 
-describe('Item.component.vue', () => {
+describe('Item.component.vue: appearance', () => {
   it('renders an Item correctly', () => {
     const model: ItemInterface = {
       id: 1,

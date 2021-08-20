@@ -12,6 +12,7 @@
   import ElToggle from '@/components/primitives/toggles/ElToggle.vue'
 
   export default defineComponent({
+    name: 'ItemComponent',
     components: {
       ElText,
       ElToggle

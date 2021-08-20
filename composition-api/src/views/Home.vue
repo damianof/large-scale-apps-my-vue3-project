@@ -17,7 +17,10 @@
       ItemsListComponent
     },
     setup() {
+      // private:
       const itemsStore = useItemsStore()
+
+      // computed:
       const items = computed(() => {
         return itemsStore.state.items
       })
@@ -25,10 +28,7 @@
         return itemsStore.state.loading
       })
 
-      onMounted(() => {
-        itemsStore.action(MutationType.items.loadItems)
-      })
-
+      // methods:
       const onSelectItem = (item: ItemInterface) => {
         itemsStore.action(MutationType.items.selectItem, {
           id: item.id,
@@ -36,9 +36,16 @@
         })
       }
 
+      // lifecycle event handlers:
+      onMounted(() => {
+        itemsStore.action(MutationType.items.loadItems)
+      })
+
       return {
+        // computed:
         items,
         loading,
+        // methods:
         onSelectItem
       }
     }

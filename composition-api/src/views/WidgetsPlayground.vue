@@ -55,11 +55,13 @@
       }
     },
     setup() {
-      const container1 = ref(HTMLElement)
+      // dom refs:
+      const container1 = ref(HTMLElement) // variable name must match attribute value in template dom element ref="container1" etc
       const container2 = ref(HTMLElement)
 
       return {
-        container1,
+        // dom refs:
+        container1, // you have to return your dom refs as part of the object returned by setup()
         container2
       }
     }
