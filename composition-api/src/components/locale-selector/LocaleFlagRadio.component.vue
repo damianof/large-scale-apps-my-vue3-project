@@ -6,7 +6,6 @@
       class="icon-button"
       name="locale"
       :value="localeInfo.selected"
-      v-model="localeInfo.selected"
       @click="onClick"
     />
   </label>

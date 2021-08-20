@@ -6,7 +6,6 @@
       class="icon-button"
       name="theme"
       :value="themeInfo.selected"
-      v-model="themeInfo.selected"
       @click="onClick"
     />
   </label>
