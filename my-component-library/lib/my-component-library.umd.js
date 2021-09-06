@@ -320,17 +320,17 @@ const themesState = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.reactive)({
 // store
 const Store = new StoreModel(themesState);
 
-;// CONCATENATED MODULE: ./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/cache-loader/dist/cjs.js??ruleSet[0].use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[1]!./src/theme-selector/ThemeRadio.component.vue?vue&type=template&id=764bba7e
+;// CONCATENATED MODULE: ./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/cache-loader/dist/cjs.js??ruleSet[0].use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[1]!./src/theme-selector/ThemeRadio.component.vue?vue&type=template&id=39cff41a
 
 
-const ThemeRadio_componentvue_type_template_id_764bba7e_hoisted_1 = { class: "material-icons" }
+const ThemeRadio_componentvue_type_template_id_39cff41a_hoisted_1 = { class: "material-icons" }
 
-function ThemeRadio_componentvue_type_template_id_764bba7e_render(_ctx, _cache, $props, $setup, $data, $options) {
+function ThemeRadio_componentvue_type_template_id_39cff41a_render(_ctx, _cache, $props, $setup, $data, $options) {
   return ((0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createBlock)("label", {
     role: "radio",
     class: _ctx.cssClass
   }, [
-    (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("i", ThemeRadio_componentvue_type_template_id_764bba7e_hoisted_1, (0,external_commonjs_vue_commonjs2_vue_root_Vue_.toDisplayString)(_ctx.themeInfo.icon), 1),
+    (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("i", ThemeRadio_componentvue_type_template_id_39cff41a_hoisted_1, (0,external_commonjs_vue_commonjs2_vue_root_Vue_.toDisplayString)(_ctx.themeInfo.icon), 1),
     (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)("input", {
       type: "radio",
       class: "icon-button",
@@ -340,7 +340,7 @@ function ThemeRadio_componentvue_type_template_id_764bba7e_render(_ctx, _cache, 
     }, null, 8, ["value"])
   ], 2))
 }
-;// CONCATENATED MODULE: ./src/theme-selector/ThemeRadio.component.vue?vue&type=template&id=764bba7e
+;// CONCATENATED MODULE: ./src/theme-selector/ThemeRadio.component.vue?vue&type=template&id=39cff41a
 
 ;// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??clonedRuleSet-80.use[0]!./node_modules/thread-loader/dist/cjs.js!./node_modules/ts-loader/index.js??clonedRuleSet-80.use[2]!./node_modules/cache-loader/dist/cjs.js??ruleSet[0].use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[1]!./src/theme-selector/ThemeRadio.component.vue?vue&type=script&lang=ts
 
@@ -353,13 +353,19 @@ function ThemeRadio_componentvue_type_template_id_764bba7e_render(_ctx, _cache, 
     computed: {
         cssClass() {
             const themeInfo = this.$props.themeInfo;
-            return `theme-radio ${themeInfo?.id} ${themeInfo?.selected ? 'selected' : ''}`.trim();
+            if (themeInfo) {
+                return `theme-radio ${themeInfo.id} ${themeInfo.selected ? 'selected' : ''}`.trim();
+            }
+            return 'theme-radio';
         }
     },
     emits: ['clicked'],
     setup(props, { emit }) {
         const onClick = () => {
-            emit('clicked', props.themeInfo?.id);
+            const themeInfo = props.themeInfo;
+            if (themeInfo) {
+                emit('clicked', themeInfo.id);
+            }
         };
         return {
             onClick
@@ -373,7 +379,7 @@ function ThemeRadio_componentvue_type_template_id_764bba7e_render(_ctx, _cache, 
 
 
 
-ThemeRadio_componentvue_type_script_lang_ts.render = ThemeRadio_componentvue_type_template_id_764bba7e_render
+ThemeRadio_componentvue_type_script_lang_ts.render = ThemeRadio_componentvue_type_template_id_39cff41a_render
 
 /* harmony default export */ var ThemeRadio_component = (ThemeRadio_componentvue_type_script_lang_ts);
 ;// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??clonedRuleSet-80.use[0]!./node_modules/thread-loader/dist/cjs.js!./node_modules/ts-loader/index.js??clonedRuleSet-80.use[2]!./node_modules/cache-loader/dist/cjs.js??ruleSet[0].use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[1]!./src/theme-selector/ThemeSelector.component.vue?vue&type=script&lang=ts
