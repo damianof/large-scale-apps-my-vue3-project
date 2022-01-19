@@ -2,25 +2,26 @@ import {
   createI18n,
   VueMessageType,
   LocaleMessages,
-  //DateTimeFormat, // TODO: see if vue-i18n@next alpha 13 has a type for this
-  //NumberFormats // TODO: see if vue-i18n@next alpha 13 has a type for this
+  ComposerOptions,
+  DatetimeFormat, // TODO: see if vue-i18n@next alpha 13 has a type for this
+  NumberFormat // TODO: see if vue-i18n@next alpha 13 has a type for this
 } from 'vue-i18n'
 
-interface LocalesDataInterface {
-  datetimeFormats: any // TODO: see if vue-i18n@next alpha 13 has a type for this
-  numberFormats: any // TODO: see if vue-i18n@next alpha 13 has a type for this
-  messages: LocaleMessages<VueMessageType> 
-}
+// interface LocalesDataInterface {
+//   datetimeFormats: any // TODO: see if vue-i18n@next alpha 13 has a type for this
+//   numberFormats: any // TODO: see if vue-i18n@next alpha 13 has a type for this
+//   messages: { [k: string]: any} | LocaleMessages<VueMessageType> 
+// }
 
 /**
  * @name: getLocalesData
  * @description: Helper to load the locale json files with each locale data
  */
-const getLocalesData = (): LocalesDataInterface => {
+const getLocalesData = (): ComposerOptions => {
   // we use require.context to get all the .json files under the locales sub-directory
   const files = (require as any).context('./locales', true, /[A-Za-z0-9-_,\s]+\.json$/i)
   // create the instance that will hold the loaded data
-  const localeData: LocalesDataInterface = {
+  const localeData: ComposerOptions = {
     datetimeFormats: {},
     numberFormats: {},
     messages: {}
@@ -33,9 +34,15 @@ const getLocalesData = (): LocalesDataInterface => {
     if (matched && matched.length > 1) {
       const localeId = matched[1]
       // from each file, set the related messages property
-      localeData.datetimeFormats[localeId] = files(key).datetimeFormats
-      localeData.numberFormats[localeId] = files(key).numberFormats
-      localeData.messages[localeId] = files(key).messages
+      if (localeData.datetimeFormats) {
+        localeData.datetimeFormats[localeId] = files(key).datetimeFormats
+      }
+      if (localeData.numberFormats) {
+        localeData.numberFormats[localeId] = files(key).numberFormats
+      }
+      if (localeData.messages) {
+        localeData.messages[localeId] = files(key).messages
+      }
     }
   })
 
@@ -43,7 +50,7 @@ const getLocalesData = (): LocalesDataInterface => {
 }
 
 // create our data dynamically by loading the JSON files through our getLocalesData helper
-const data: LocalesDataInterface = getLocalesData()
+const data: ComposerOptions = getLocalesData()
 
 // create out vue-18n instance
 export const i18n = createI18n({
@@ -52,4 +59,4 @@ export const i18n = createI18n({
   messages: data.messages,
   datetimeFormats: data.datetimeFormats,
   numberFormats: data.numberFormats
-})
+} as ComposerOptions)

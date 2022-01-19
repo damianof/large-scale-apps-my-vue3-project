@@ -30,7 +30,7 @@ export class HttpClientModel implements HttpClientInterface {
         headers: {}
       }
 
-      if (requiresToken) {
+      if (requiresToken && options.headers) {
         const token = this.getToken()
         options.headers.RequestVerificationToken = token
       }
@@ -56,7 +56,7 @@ export class HttpClientModel implements HttpClientInterface {
         headers: {}
       }
 
-      if (requiresToken) {
+      if (requiresToken && options.headers) {
         const token = this.getToken()
         options.headers.RequestVerificationToken = token
       }

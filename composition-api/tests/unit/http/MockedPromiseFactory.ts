@@ -18,7 +18,7 @@ export const MockedPromiseFactory = (
         data: params.data,
         status: params.statusCode,
         statusText: params.statusText,
-        headers: [],
+        headers: {},
         config: params.requestConfig
       }
 
