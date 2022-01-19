@@ -19,7 +19,10 @@
     },
     props: {
       model: {
-        type: Object as PropType<ItemInterface>
+        type: Object as PropType<ItemInterface>,
+        default: () => {
+          return {}
+        }
       },
       isLast: {
         type: Boolean,

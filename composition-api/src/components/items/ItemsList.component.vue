@@ -26,7 +26,8 @@
     },
     props: {
       items: {
-        type: Array as PropType<ItemInterface[]>
+        type: Array as PropType<ItemInterface[]>,
+        default: () => []
       },
       loading: {
         type: Boolean
