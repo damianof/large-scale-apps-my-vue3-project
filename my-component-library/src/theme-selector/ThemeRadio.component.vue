@@ -24,13 +24,19 @@
     computed: {
       cssClass(): string {
         const themeInfo = this.$props.themeInfo
-        return `theme-radio ${themeInfo?.id} ${themeInfo?.selected ? 'selected' : ''}`.trim()
+        if (themeInfo) {
+          return `theme-radio ${themeInfo.id} ${themeInfo.selected ? 'selected' : ''}`.trim()
+        }
+        return 'theme-radio'
       }
     },
     emits: ['clicked'],
     setup(props, { emit }) {
       const onClick = () => {
-        emit('clicked', props.themeInfo?.id)
+        const themeInfo = props.themeInfo
+        if (themeInfo) {
+          emit('clicked', themeInfo.id)
+        }
       }
 
       return {
