@@ -1,0 +1,32 @@
+{
+  "name": "my-vue-project-with-vite",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite --mode mock",
+    "build": "vue-tsc --noEmit && vite build --mode live",
+    "start": "npm run dev",
+    "start-local": "vite --mode mock",
+    "preview": "vite preview",
+    "test": "jest src",
+    "test:watch": "npm run test -- --watch"
+  },
+  "dependencies": {
+    "vue": "^3.2.25"
+  },
+  "devDependencies": {
+    "@headlessui/vue": "^1.4.3",
+    "@tailwindcss/forms": "^0.4.0",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@types/jest": "^27.4.0",
+    "@vitejs/plugin-vue": "^2.0.0",
+    "autoprefixer": "^10.4.2",
+    "axios": "^0.25.0",
+    "jest": "^27.4.7",
+    "postcss": "^8.4.6",
+    "tailwindcss": "^3.0.18",
+    "ts-jest": "^27.1.3",
+    "typescript": "^4.4.4",
+    "vite": "^2.7.2",
+    "vue-tsc": "^0.29.8"
+  }
+}
