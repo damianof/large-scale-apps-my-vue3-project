@@ -1,0 +1,35 @@
+{
+  "global": {
+    "version": 0.1
+  },
+
+  "httpClient": {
+    "tokenKey": "myvue3app-token"
+  },
+
+  "apiClient": {
+    "type": "live"
+  },
+
+  "localization": {
+    "apiUrls": {
+      "fetchTranslation": "path/to/your/real/BETA/api/and-point"
+    },
+    "locales": [
+      { "key": "en-US", "isDefault": true },
+      { "key": "it-IT", "isDefault": false },
+      { "key": "fr-FR", "isDefault": false },
+      { "key": "es-ES", "isDefault": false }
+    ],
+    "localStorageCache": { 
+      "enabled": true, 
+      "expirationInMinutes": 60
+    }
+  },
+  
+  "items": {
+    "apiUrls": {
+      "fetchItems": "/path/to/your/real/BETA/api/and-point"
+    }
+  }
+}

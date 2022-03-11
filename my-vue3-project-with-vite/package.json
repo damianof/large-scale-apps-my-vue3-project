@@ -1,0 +1,28 @@
+{
+  "name": "my-vue3-project-with-vite",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite --mode mock",
+    "start": "npm run dev",
+    "start-local": "vite --mode localapis",
+    "build": "vue-tsc --noEmit && vite build --mode productio",
+    "build-beta": "vue-tsc --noEmit && vite build --mode beta",
+    "build-mock": "vue-tsc --noEmit && vite build --mode mock",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^0.26.1",
+    "vue": "^3.2.25"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "@vitejs/plugin-vue": "^2.2.4",
+    "i18next": "^21.6.14",
+    "typescript": "^4.5.4",
+    "vite": "^2.8.6",
+    "vitest": "^0.6.0",
+    "vue-i18n": "^9.1.9",
+    "vue-tsc": "^0.29.8"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "global": {
+    "version": 0.103
+  },
+
+  "httpClient": {
+    "tokenKey": "myvue3app-token"
+  },
+
+  "apiClient": {
+    "type": "mock"
+  },
+
+  "localization": {
+    "apiUrls": {
+      "fetchTranslation": "/static/mock-data/localization/[namespace]/[key].json"
+    },
+    "locales": [
+      { "key": "en-US", "isDefault": true },
+      { "key": "it-IT", "isDefault": false },
+      { "key": "fr-FR", "isDefault": false },
+      { "key": "es-ES", "isDefault": false }
+    ],
+    "localStorageCache": { 
+      "enabled": true, 
+      "expirationInMinutes": 60
+    }
+  },
+
+  "items": {
+    "apiUrls": {
+      "fetchItems": "/static/mock-data/items/items.json"
+    }
+  }
+}
