@@ -12,7 +12,7 @@ export const getDefaultLocale = () => {
   const availableLocales = config.localization.locales
   // return the one marked isDefault
   return availableLocales.find((o) => o.isDefault) as {
-    key: string,
+    key: string
     isDefault: boolean
   }
 }

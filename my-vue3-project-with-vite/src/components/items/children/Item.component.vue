@@ -1,7 +1,5 @@
 <template>
-  <li :class="cssClass" @click="onClick">
-    [{{model.name}}] [{{model.selected}}]
-  </li>
+  <li :class="cssClass" @click="onClick">[{{ model.name }}] [{{ model.selected }}]</li>
 </template>
 
 <script lang="ts">
@@ -36,9 +34,10 @@
     },
     emits: ['select'],
     setup(props, { emit }) {
-
       const cssClass = computed(() => {
-        let result = ['item flex items-center justify-between cursor-pointer border border-l-4 list-none rounded-sm px-3 py-3']
+        let result = [
+          'item flex items-center justify-between cursor-pointer border border-l-4 list-none rounded-sm px-3 py-3'
+        ]
         if (props.model?.selected) {
           result.push('font-bold bg-pink-200 hover:bg-pink-100 selected')
         } else {

@@ -28,7 +28,8 @@
       })
 
       return {
-        t, currentLocale
+        t,
+        currentLocale
       }
     }
   })

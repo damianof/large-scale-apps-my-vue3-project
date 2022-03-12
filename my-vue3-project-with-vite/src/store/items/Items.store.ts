@@ -3,10 +3,8 @@
 // import a reference to Vue's reactive
 import { reactive } from 'vue'
 
-// import interfaces references 
-import {
-  ItemsStateInterface
-} from './models'
+// import interfaces references
+import { ItemsStateInterface } from './models'
 // import a reference to our ItemInterface
 import { ItemInterface } from '@/models'
 
@@ -20,7 +18,6 @@ const itemsState = reactive<ItemsStateInterface>({
 
 // our items store actions implementation:
 const actions = {
-
   // action that we invoke to load the items from an api:
   loadItems: async () => {
     // set loading to true and clear current data:
@@ -36,13 +33,10 @@ const actions = {
   },
 
   // action that we'll invoke from our component to select a specific item
-  selectItem: async (params: {
-    id: number
-    selected: boolean
-  }) => {
+  selectItem: async (params: { id: number; selected: boolean }) => {
     console.log('ItemsStore: action: selectItem', params)
     const { id, selected } = params
-    const item = (itemsState.items || []).find(o => o.id === id)
+    const item = (itemsState.items || []).find((o) => o.id === id)
     if (item) {
       item.selected = selected
     }

@@ -1,10 +1,8 @@
 <template>
   <div class="locale-selector">
-    <div v-if="isLoadingLocale">
-      Loading locale data...
-    </div>
+    <div v-if="isLoadingLocale">Loading locale data...</div>
     <label
-      v-for="(item) in locales"
+      v-for="item in locales"
       :key="item.key"
       :for="`radio-locale-${item.key}`"
       class="cursor-pointer"
@@ -38,7 +36,11 @@
       }
 
       return {
-        t, locales, currentLocale, isLoadingLocale, onLocaleClick
+        t,
+        locales,
+        currentLocale,
+        isLoadingLocale,
+        onLocaleClick
       }
     }
   })

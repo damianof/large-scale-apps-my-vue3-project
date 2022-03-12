@@ -3,10 +3,13 @@
     <h3>{{ t('items.list.header') }}:</h3>
     <Loader v-show="loading" />
     <ul v-show="!loading">
-      <ItemComponent v-for="(item, index) in items" 
-        :key="item.id" 
-        :isLast="index === items.length-1" 
-        :model="item" @select="onItemSelect" />
+      <ItemComponent
+        v-for="(item, index) in items"
+        :key="item.id"
+        :isLast="index === items.length - 1"
+        :model="item"
+        @select="onItemSelect"
+      />
     </ul>
   </div>
 </template>

@@ -3,10 +3,7 @@ import { apiClient } from '../api-client'
 import { reactive, ref, nextTick } from 'vue'
 
 import { i18n } from './i18n.init'
-import { 
-  getUserPreferredLocale,
-  setUserPreferredLocale
-} from './utils'
+import { getUserPreferredLocale, setUserPreferredLocale } from './utils'
 
 // get reference to out localization config
 const localStorageConfig = config.localization.localStorageCache
@@ -22,7 +19,6 @@ const defaultLocaleId = getUserPreferredLocale()
 // state
 const isLoadingLocale = ref(true) // will set to true whilte a locale is being loaded
 const currentLocale = ref(defaultLocaleId) // will be set to the current lcid value
-
 
 // helper to change the current 18n locale
 const changeLocale = async (lcid: string) => {
@@ -65,7 +61,7 @@ const changeLocale = async (lcid: string) => {
     // update tate
     currentLocale.value = lcid
   } else {
-    console.log(`loading from api: lcid: "${ lcid }"`)
+    console.log(`loading from api: lcid: "${lcid}"`)
     // retrieve data from API end point (or CDN etc)
     const localeData = await apiClient.localization.fetchTranslation('translation', lcid)
     // use the data returned y the API and pass it toi18n setLocaleMessage
@@ -109,7 +105,7 @@ export function useLocalization() {
     isLoadingLocale,
     currentLocale,
     changeLocale,
-    t: i18n.global.t,
+    t: i18n.global.t
     //getUserPreferredLocale
   }
 }
