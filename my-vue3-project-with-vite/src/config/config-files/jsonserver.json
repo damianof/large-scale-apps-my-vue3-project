@@ -13,7 +13,7 @@
 
   "localization": {
     "apiUrls": {
-      "fetchTranslation": "http://api.localhost:4111/localization/[namespace]/[key]"
+      "fetchTranslation": "/api/[namespace]_[key]"
     },
     "locales": [
       { "key": "en-US", "isDefault": true },
@@ -29,7 +29,7 @@
 
   "items": {
     "apiUrls": {
-      "fetchItems": "http://api.localhost:4111/items"
+      "fetchItems": "/api/items"
     }
   }
 }

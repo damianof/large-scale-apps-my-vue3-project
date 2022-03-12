@@ -5,6 +5,7 @@ import { ConfigInterface } from './models/Config.interface'
 
 // individual environments configs:
 import configMock from './config-files/mock.json'
+import configJsonServer from './config-files/jsonserver.json'
 import configLocal from './config-files/localapis.json'
 import configBeta from './config-files/beta.json'
 import configProduction from './config-files/production.json'
@@ -12,6 +13,7 @@ import configProduction from './config-files/production.json'
 // example using strategy pattern:
 // const configFilesMap: { [key: string]: ConfigInterface } = {
 //   mock: configMock,
+//   jsonserver: configJsonServer,
 //   local: configLocal,
 //   beta: configBeta,
 //   production: configProduction,
@@ -24,6 +26,7 @@ import configProduction from './config-files/production.json'
 // example with javascript Map()
 export const configFilesMap: Map<string, ConfigInterface> = new Map<string, ConfigInterface>([
   ['mock', configMock],
+  ['jsonserver', configJsonServer],
   ['localapis', configLocal],
   ['beta', configBeta],
   ['production', configProduction]

@@ -1,0 +1,59 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Item from json-server 1",
+      "selected": false
+    },
+    {
+      "id": 2,
+      "name": "Item 2",
+      "selected": false
+    },
+    {
+      "id": 3,
+      "name": "Item 3",
+      "selected": false
+    },
+    {
+      "id": 4,
+      "name": "Item 4",
+      "selected": false
+    },
+    {
+      "id": 5,
+      "name": "Item 5",
+      "selected": false
+    },
+    {
+      "id": 7,
+      "name": "Item 7 added",
+      "selected": false
+    },
+    {
+      "id": 8,
+      "name": "Item 8 added",
+      "selected": true
+    }
+  ],
+  "translation_en-US": {
+    "locale.selector.en-US": "English",
+    "locale.selector.it-IT": "Italian",
+    "locale.selector.fr-FR": "French",
+    "locale.selector.es-ES": "Spanish",
+    "home.welcome": "Welcome: this message is localized in English",
+    "navigation.home": "Home",
+    "navigation.about": "About",
+    "items.list.header": "My Items"
+  },
+  "translation_it-IT": {
+    "locale.selector.en-US": "Inglese",
+    "locale.selector.it-IT": "Italiano",
+    "locale.selector.fr-FR": "Francese",
+    "locale.selector.es-ES": "Spagnolo",
+    "home.welcome": "Benvenuti: this message is localized in Italian",
+    "navigation.home": "Home",
+    "navigation.about": "Chi Siamo",
+    "items.list.header": "I miei articoli"
+  }
+}

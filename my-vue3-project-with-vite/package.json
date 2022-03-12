@@ -5,11 +5,13 @@
   "scripts": {
     "dev": "vite --mode mock",
     "start": "npm run dev",
-    "start-local": "vite --mode localapis",
+    "serve-with-jsonserver": "vite --mode jsonserver",
+    "serve-local": "vite --mode localapis",
     "build": "vue-tsc --noEmit && vite build --mode productio",
     "build-beta": "vue-tsc --noEmit && vite build --mode beta",
     "build-mock": "vue-tsc --noEmit && vite build --mode mock",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "serve-json-server-api": "json-server --port 3111 --watch json-server/db.json"
   },
   "dependencies": {
     "axios": "^0.26.1",

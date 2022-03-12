@@ -9,6 +9,18 @@ import { fileURLToPath, URL } from 'url'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
+  server: {
+    port: 3005,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3111',
+        changeOrigin: true,
+        secure: false,
+        ws: false,
+        rewrite: (path) => path.replace(/^\/api/, '')
+      }
+    }
+  },
   envDir: './src/',
   resolve: {
     alias: {
