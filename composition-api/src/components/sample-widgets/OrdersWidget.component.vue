@@ -20,7 +20,7 @@
   import { defineComponent } from 'vue'
   import ElBaseCard from '@/components/primitives/cards/ElBaseCard.component.vue'
   import ElWidgetHeader from '@/components/primitives/cards/ElWidgetHeader.component.vue'
-  import WidgetBase from '@/components//widgets-container/BaseWidget.component.vue'
+  import WidgetBase from '@/components/widgets-container/BaseWidget.component.vue'
 
   export default defineComponent({
     extends: WidgetBase,

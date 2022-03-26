@@ -34,18 +34,22 @@
       ElButton,
       WidgetsContainer
     },
-    methods: {
-      addWidget(container: any, componentKey: string, positionType: number) {
+    setup() {
+      // dom refs:
+      const container1 = ref(HTMLElement) // variable name must match attribute value in template dom element ref="container1" etc
+      const container2 = ref(HTMLElement)
+
+      const addWidget = (container: any, componentKey: string, positionType: number) => {
         const component = WidgetsCatalog.get(componentKey)
         const containerId: number = Number(container.containerId)
         const widgetInfo: WidgetInfoInterface = {
           id: -1,
-          containerId: containerId,
+          containerId,
           position: -1,
           component: markRaw(component),
           props: {
             id: -1,
-            containerId: containerId,
+            containerId,
             name: 'test',
             collapsed: false,
             toggling: false
@@ -53,16 +57,12 @@
         }
         container.addWidget(widgetInfo)
       }
-    },
-    setup() {
-      // dom refs:
-      const container1 = ref(HTMLElement) // variable name must match attribute value in template dom element ref="container1" etc
-      const container2 = ref(HTMLElement)
 
       return {
         // dom refs:
         container1, // you have to return your dom refs as part of the object returned by setup()
-        container2
+        container2,
+        addWidget
       }
     }
   })

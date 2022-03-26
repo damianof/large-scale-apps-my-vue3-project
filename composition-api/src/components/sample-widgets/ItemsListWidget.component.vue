@@ -24,7 +24,7 @@
   import Loader from '@/components/shared/Loader.component.vue'
   import ElBaseCard from '@/components/primitives/cards/ElBaseCard.component.vue'
   import ElWidgetHeader from '@/components/primitives/cards/ElWidgetHeader.component.vue'
-  import WidgetBase from '@/components//widgets-container/BaseWidget.component.vue'
+  import WidgetBase from '@/components/widgets-container/BaseWidget.component.vue'
   import { useItemsStore } from '@/store/items'
   import { MutationType, StoreModuleNames } from '@/models/store'
   import { useI18n } from 'vue-i18n'
