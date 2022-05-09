@@ -1,3 +1,5 @@
+[![MadeWithVueJs.com shield](https://madewithvuejs.com/storage/repo-shields/2635-shield.svg)](https://madewithvuejs.com/p/large-scale-apps-with-vue-and-typescript/shield-link)
+
 ### Companion code for the book:
 <img src="readme-images/book-vue3-300px.png" width="80px" /> 
 
