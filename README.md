@@ -3,6 +3,9 @@
 ### Companion code for the book:
 <img src="readme-images/book-vue3-300px.png" width="80px" /> 
 
+### IMPORTANT
+There is a new edition of this book at https://leanpub.com/vue-vite-typescript and its sample code is at https://github.com/damianof/large-scale-apps-my-vue-vite-project. This repository will be eventually archived within the next 6 months. If you have already purchased the older edition, reach out to me via email and I will send you a coupon to download the new edition for free.
+
 [Large Scale Apps with Vue 3 and TypeScript](
 https://vuetypescript.com/?ref=gitrepo "Large Scale Apps with Vue 3 and TypeScript")
 
